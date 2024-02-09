@@ -1,0 +1,9 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    &__tittle {
+        font-size: 14px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
