@@ -1,0 +1,91 @@
+.profile {
+    padding: 5px 35px 50px 35px;
+    background-color: $color-secondary-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset_button {
+    margin:  38px 200px 0px 45px;
+    font-size: 12px;
+    width: 75px;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    font-family: $font-main;
+    background-color: transparent;
+    border: 1px solid white;
+    color: #54585a;
+
+
+}
+
+.section_1 {
+    width: 240px;
+    padding: 20px 0 12px 0;
+    background-color: $color-white;
+    box-shadow: 1px 1px 5px #666;
+}
+
+.card_texts {
+    border-left: solid 5px $color-secondary-medium;
+}
+
+.card__title {
+    margin-left: 20px;
+    margin-bottom: 4px;
+    color: $color-secondary-dark;
+    font-size: 24px;
+    font-family: $font-secondary;
+
+    }
+
+.card__text {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-family: $font-secondary;
+    color: #54585a;
+    font-size: 16px;
+}
+
+.picture {
+
+        width: 240px;
+        margin-bottom: 10px;
+        height: 200px;
+}
+
+
+.rrss ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-right: 30px;
+    padding: 0px;
+}
+
+.rrss ul li a i {
+    color: $color-secondary-dark;
+}
+
+.rrss ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border-radius: 50% solid;
+}
+
+.fa-brands {
+    font-size: 19px;
+}
+
+.social_card {
+    border: 2px solid $color-secondary-light;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 0 0 10px;
+    padding: 4px;
+}
