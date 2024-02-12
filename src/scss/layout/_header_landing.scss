@@ -1,8 +1,9 @@
 .header__landing {
-  padding: 95px 35px 35px 35px;
+  padding: 95px 0px 35px 0px;
   background-color: $color-bg-landing;
   figure {
-    width: 100%;
+    width: 250px;
+    margin: auto;
     img {
       width: 100%;
     }
