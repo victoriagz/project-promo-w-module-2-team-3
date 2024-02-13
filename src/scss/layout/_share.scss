@@ -1,0 +1,69 @@
+
+
+.share_section {
+    // height: 175px; //poner??
+    padding-bottom: 60px;
+
+    &__top_line {
+        border-bottom: 1px solid $color-secondary-light-grey; 
+        padding-bottom: 10px;
+    }
+
+    &__top_part {
+        display: flex; 
+        justify-content: space-around; //cambiar
+        padding: 10px 0 30px 0; 
+
+        &--share_icon {
+            color: $color-primary-dark;
+        }
+
+        &--share_message {
+            font-family: $font-main;
+            font-weight: 600;
+            color: $color-secondary-dark-grey;
+        }
+
+        &--angle_up_icon {
+            color: $color-secondary-dark-grey;
+        }
+    }
+
+    &__create_card {
+        //text-align: center;
+
+        & button {
+            border: none;
+            color: $color-white;
+            background-color: $color-primary-dark;
+            padding: 13px 16px 13px 16px;
+            border-radius: 12px;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+            display: flex;
+            align-items: center;
+            //justify-content: space-around;
+            gap: 7px;
+
+            & i {
+                font-size: 23px;
+            }
+           
+
+            & p {
+                font-family: $font-main;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__bottom_line {
+        border-bottom: 1px solid $color-secondary-light-grey; 
+        padding-bottom: 10px;
+        // position: absolute; 
+        //transform: translateY(100px);
+    }
+
+
+}
+

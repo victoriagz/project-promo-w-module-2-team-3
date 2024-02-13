@@ -1,18 +1,31 @@
-<fieldset>
-    <!-- LINEA DE ARRIBA? -->
+<fieldset class="share_section">
+    <!-- linea de arriba? -->
+    <div class="share_section__top_line"></div>
 
-    <div>
+    <!-- Top part -->
+    <div class="share_section__top_part">
         <!-- icono comparte -->
-        <i class="fa-solid fa-share-nodes"></i>
-
-        <p>COMPARTE</p>
+        <div class="share_section__top_part--share_icon">
+            <i class="fa-solid fa-share-nodes"></i>
+        </div>
+       
+        <!-- comparte message -->
+        <p class="share_section__top_part--share_message">COMPARTE</p>
 
         <!-- icono flecha arriba -->
-        <i class="fa-solid fa-angle-up"></i>
+        <div class="share_section__top_part--angle_up_icon">
+            <i class="fa-solid fa-angle-up"></i>
+        </div>
     </div>
 
     <!-- Crear tarjeta -->
-    <input type="submit" value="CREAR TARJETA">
-
-    <!-- LINEA ABAJO -->
+    <div class="share_section__create_card">
+        <button type="submit">
+            <i class="fa-regular fa-address-card"></i>
+            <p>CREAR TARJETA</p>
+        </button>
+    </div>
+    
+    <!-- Línea abajo -->
+    <div class="share_section__bottom_line"></div>
 </fieldset> 
