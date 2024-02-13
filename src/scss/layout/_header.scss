@@ -1,9 +1,11 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-
-    &__tittle {
-        font-size: 14px;
-        font-family: 'Courier New', Courier, monospace;
+  height: 111px;
+  padding: 30px 80px 30px 40px;
+  background-color: $color-white;
+  figure {
+    width: 200px;
+    img {
+      width: 100%;
     }
+  }
 }
