@@ -4,12 +4,19 @@
   background-color: $color-bg-landing;
   text-align: center;
   padding-bottom: 30px;
+  @media (min-width: 768px) {
+    height: 47vh;
+  }
 
   h1 {
     font-family: $font-landing;
     font-size: 19.2px;
     color: $color-primary-dark;
     text-align: center;
+    @media (min-width: 768px) {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 
   p {
@@ -17,10 +24,15 @@
     font-size: 12.8px;
     color: $color-secondary-dark;
     text-align: center;
+    @media (min-width: 768px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   .main_landing__container {
-    margin: 40px 25px 70px 25px;
+    width: 320px;
+    margin: 40px auto 70px auto;
     padding: 15px 20px 20px 15px;
     font-size: 14px;
     color: #54585a;
@@ -28,6 +40,10 @@
     border-radius: 5px;
     display: flex;
     justify-content: space-around;
+    @media (min-width: 768px) {
+      font-size: 18px;
+      margin: 40px auto 12vh auto;
+    }
 
     &--icon {
       display: flex;
@@ -40,6 +56,9 @@
     i {
       color: $color-primary-dark;
       font-size: 22.4px;
+      @media (min-width: 768px) {
+        font-size: 28px;
+      }
     }
   }
 
