@@ -1,11 +1,12 @@
 footer {
   width: 100%;
-  padding-top: 18px;
+  height: 18vh;
+  padding-top: 25px;
   padding-bottom: 20px;
   background-color: $color-white;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
   text-align: center;
   span {
     font-family: $font-main;
