@@ -4,6 +4,29 @@
   flex-wrap: nowrap;
   align-items: flex-end;
   gap: 10px;
+  padding: 20px;
+  width: 100%;
+  height: 340px;
+}
+
+.form__box{
+  display: flex;
+  align-items: center;
+  border: none; 
+}
+
+.form__heading {
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+
+.title {
+  font-size: 18px;
+  font-family: $font-main;
+  font-weight: normal;
+  padding: 20px 15px 10px;
+
 }
 
 .color__selection--form {
@@ -33,8 +56,8 @@
   }
 
   &__swatch {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 25px;
     display: inline-block;
   }
 }
