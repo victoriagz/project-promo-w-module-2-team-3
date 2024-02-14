@@ -1,0 +1,26 @@
+.form__box {
+  border: none;
+}
+
+.form__design__input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+
+  label {
+    font-size: 14px;
+    font-family: $font-main;
+    color: $color-secondary-dark;
+  }
+
+  input {
+    border: 1px solid $color-secondary-light;
+    padding: 5px;
+    ::placeholder {
+      font-size: 14px;
+      font-family: $font-main;
+      color: $color-text-footer;
+    }
+  }
+}
