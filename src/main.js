@@ -8,20 +8,42 @@ const designContainer = document.querySelector('.js-color-container');
 const formContainer = document.querySelector('.js-form');
 const shareContainer = document.querySelector('.js-share');
 
-function showArrowUp() {
+
+function showArrowUpDesign() {
     designContainer.classList.remove('collapsed');
 }
-function hideArrowUp() {
+
+function hideArrowUpDesign() {
     designContainer.classList.add('collapsed');
 }
 
-function handleArrowUp (event) {
+function handleArrowUpDesign (event) {
     event.preventDefault();
     if (designContainer.classList.contains('collapsed')) {
-        showArrowUp();
+        showArrowUpDesign();
     } else {
-        hideArrowUp();
+        hideArrowUpDesign();
     }
 }
 
-arrowUpDesign.addEventListener('click', handleArrowUp);
+arrowUpDesign.addEventListener('click', handleArrowUpDesign);
+
+
+function showArrowUpForm() {
+    formContainer.classList.remove('collapsed');
+}
+
+function hideArrowUpForm() {
+    formContainer.classList.add('collapsed');
+}
+
+function handleArrowUpForm (event) {
+    event.preventDefault();
+    if (designContainer.classList.contains('collapsed')) {
+        showArrowUpForm();
+    } else {
+        hideArrowUpForm();
+    }
+}
+
+arrowUpForm.addEventListener('click', handleArrowUpForm);
