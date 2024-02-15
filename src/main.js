@@ -8,42 +8,42 @@ const designContainer = document.querySelector('.js-color-container');
 const formContainer = document.querySelector('.js-form');
 const shareContainer = document.querySelector('.js-share');
 
-
-function showArrowUpDesign() {
-    designContainer.classList.remove('collapsed');
+function showArrowUp(patata) {
+    patata.classList.remove('collapsed');
 }
 
-function hideArrowUpDesign() {
-    designContainer.classList.add('collapsed');
+function hideArrowUp(patata) {
+    patata.classList.add('collapsed');
 }
 
-function handleArrowUpDesign (event) {
+function handleArrowUp (event) {
     event.preventDefault();
-    if (designContainer.classList.contains('collapsed')) {
-        showArrowUpDesign();
+    if (patata.classList.contains('collapsed')) {
+        showArrowUp();
     } else {
-        hideArrowUpDesign();
+        hideArrowUp();
     }
 }
 
-arrowUpDesign.addEventListener('click', handleArrowUpDesign);
+arrowUp.addEventListener('click', handleArrowUp(designContainer));
+arrowUp.addEventListener('click', handleArrowUp(formContainer));
 
 
-function showArrowUpForm() {
-    formContainer.classList.remove('collapsed');
-}
+// function showArrowUpForm() {
+//     formContainer.classList.remove('collapsed');
+// }
 
-function hideArrowUpForm() {
-    formContainer.classList.add('collapsed');
-}
+// function hideArrowUpForm() {
+//     formContainer.classList.add('collapsed');
+// }
 
-function handleArrowUpForm (event) {
-    event.preventDefault();
-    if (designContainer.classList.contains('collapsed')) {
-        showArrowUpForm();
-    } else {
-        hideArrowUpForm();
-    }
-}
+// function handleArrowUpForm (event) {
+//     event.preventDefault();
+//     if (designContainer.classList.contains('collapsed')) {
+//         showArrowUpForm();
+//     } else {
+//         hideArrowUpForm();
+//     }
+// }
 
-arrowUpForm.addEventListener('click', handleArrowUpForm);
+// arrowUpForm.addEventListener('click', handleArrowUpForm);
