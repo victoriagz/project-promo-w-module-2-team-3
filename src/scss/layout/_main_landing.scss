@@ -1,11 +1,24 @@
 .main_landing {
-  height: 50vh;
-  padding-top: 20px;
+  height: 82vh;
+  padding-top: 20vh;
   background-color: $color-bg-landing;
   text-align: center;
-  padding-bottom: 30px;
   @media (min-width: 768px) {
-    height: 47vh;
+    height: 92vh;
+    padding-top: 30vh;
+  }
+  .logo__landing {
+    padding-bottom: 30px;
+    figure {
+      width: 250px;
+      margin: 0px auto;
+      @media (min-width: 768px) {
+        width: 420px;
+      }
+      img {
+        width: 100%;
+      }
+    }
   }
 
   h1 {
@@ -16,6 +29,7 @@
     @media (min-width: 768px) {
       font-size: 24px;
       line-height: 24px;
+      padding-bottom: 10px;
     }
   }
 
@@ -32,7 +46,7 @@
 
   .main_landing__container {
     width: 320px;
-    margin: 40px auto 70px auto;
+    margin: 30px auto 70px auto;
     padding: 15px 20px 20px 15px;
     font-size: 14px;
     color: #54585a;
@@ -42,7 +56,7 @@
     justify-content: space-around;
     @media (min-width: 768px) {
       font-size: 18px;
-      margin: 40px auto 12vh auto;
+      margin: 40px auto 20vh auto;
     }
 
     &--icon {
@@ -51,13 +65,17 @@
       text-align: center;
       width: 60px;
       gap: 3px;
-    }
 
-    i {
-      color: $color-primary-dark;
-      font-size: 22.4px;
-      @media (min-width: 768px) {
-        font-size: 28px;
+      i {
+        color: $color-primary-dark;
+        font-size: 22.4px;
+        @media (min-width: 768px) {
+          font-size: 28px;
+        }
+      }
+
+      .icon-landing {
+        padding: 0px;
       }
     }
   }
