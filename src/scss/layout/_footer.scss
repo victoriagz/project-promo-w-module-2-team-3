@@ -1,23 +1,40 @@
 footer {
   width: 100%;
-  padding-top: 18px;
-  padding-bottom: 20px;
+  height: 18vh;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color: $color-white;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
   text-align: center;
+  @media (min-width: 768px) {
+    height: 8vh;
+    flex-direction: row;
+    padding: 15px 40px;
+    justify-content: space-between;
+  }
+
   span {
     font-family: $font-main;
     font-size: 14px;
-    line-height: 20px;
+    height: 20px;
     color: $color-text-footer;
+    @media (min-width: 768px) {
+      margin-top: 8px;
+    }
   }
+
   figure {
     width: 100px;
     margin: auto;
+    padding-bottom: 5px;
+    @media (min-width: 768px) {
+      margin: 0;
+    }
     img {
       width: 100%;
+      margin-bottom: 20px;
     }
   }
 }
