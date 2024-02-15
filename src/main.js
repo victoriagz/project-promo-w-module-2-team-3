@@ -31,7 +31,12 @@ arrowUpShareAfter.addEventListener('click', () => handleArrowUp(shareAfterContai
 
 
 
+// FUNCIONES QUE VAMOS A NECESITAR: 
 
+//     1- Desplegar los contenidos del apartado section2 DISEÑA, RELLANA,COMPARTE.
+//     2- Cambiar los colores de la tarjeta con la paleta de colores.
+//     3- Aplicar cambios en el boton RESET para volver a empezar.
+//     4- 
 
 
 
