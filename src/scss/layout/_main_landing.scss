@@ -7,8 +7,16 @@
     height: 92vh;
     padding-top: 30vh;
   }
+  @media (min-width: 1024px) {
+    height: 92vh;
+    padding-top: 20vh;
+  }
+
   .logo__landing {
     padding-bottom: 30px;
+    @media (min-width: 1024px) {
+      padding-bottom: 20px;
+    }
     figure {
       width: 250px;
       margin: 0px auto;
@@ -29,7 +37,7 @@
     @media (min-width: 768px) {
       font-size: 24px;
       line-height: 24px;
-      padding-bottom: 10px;
+      padding-bottom: 5px;
     }
   }
 
@@ -56,7 +64,11 @@
     justify-content: space-around;
     @media (min-width: 768px) {
       font-size: 18px;
-      margin: 40px auto 20vh auto;
+      margin: 20px auto 170px auto;
+    }
+    @media (min-width: 1024px) {
+      font-size: 18px;
+      margin: 20px auto 50px auto;
     }
 
     &--icon {

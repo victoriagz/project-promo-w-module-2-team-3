@@ -3,6 +3,8 @@ footer {
   height: 18vh;
   padding-top: 25px;
   padding-bottom: 25px;
+  position: fixed;
+  bottom: 0;
   background-color: $color-white;
   display: flex;
   flex-direction: column;
@@ -11,7 +13,13 @@ footer {
   @media (min-width: 768px) {
     height: 8vh;
     flex-direction: row;
-    padding: 15px 40px;
+    padding: 20px 40px;
+    justify-content: space-between;
+  }
+  @media (min-width: 1024px) {
+    height: 8vh;
+    flex-direction: row;
+    padding: 8px 40px;
     justify-content: space-between;
   }
 
@@ -22,6 +30,9 @@ footer {
     color: $color-text-footer;
     @media (min-width: 768px) {
       margin-top: 8px;
+    }
+    @media (min-width: 1024px) {
+      margin-top: 10px;
     }
   }
 
@@ -34,7 +45,7 @@ footer {
     }
     img {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
     }
   }
 }
