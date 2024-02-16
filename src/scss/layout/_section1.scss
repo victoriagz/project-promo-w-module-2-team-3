@@ -25,6 +25,10 @@
 .profile {
     width: 50%;
     height: 50%;
+    @media all and (min-width: 768px) { 
+        width: 50%;
+        height: 50%;
+}
 }
 
 
