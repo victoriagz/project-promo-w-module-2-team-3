@@ -21,10 +21,10 @@ function handleArrowUp(container) {
 }
 
 // Asociar los botones de flecha con sus respectivos contenedores
-arrowUpDesign.addEventListener('click', () => handleArrowUp(designContainer));
-arrowUpForm.addEventListener('click', () => handleArrowUp(formContainer));
-arrowUpShare.addEventListener('click', () => handleArrowUp(shareContainer));
-arrowUpShareAfter.addEventListener('click', () => handleArrowUp(shareAfterContainer));
+// arrowUpDesign.addEventListener('click', () => handleArrowUp(designContainer));
+// arrowUpForm.addEventListener('click', () => handleArrowUp(formContainer));
+// arrowUpShare.addEventListener('click', () => handleArrowUp(shareContainer));
+// arrowUpShareAfter.addEventListener('click', () => handleArrowUp(shareAfterContainer));
 
 // FUNCIONES QUE VAMOS A NECESITAR:
 
@@ -79,3 +79,22 @@ arrowUpShareAfter.addEventListener('click', () => handleArrowUp(shareAfterContai
 // }
 
 // arrowUpForm.addEventListener('click', handleArrowUpForm);
+
+// reset-button
+
+const resetForm = document.querySelector('.js-reset-button');
+
+const handleResetForm = () => {
+  console.log ('The user clicked the button');
+  document.getElementById('card__title__id').innerHTML = 'Nombre Apellido';
+  document.getElementById('card__job__id').innerHTML = 'Front-end developer';
+  document.getElementById('card__img__id').src = 'https://i.pinimg.com/564x/da/f7/8c/daf78c186a9d4fa2bcfd1d84d9c956ca.jpg';
+  document.getElementById('social__email__id').href = '#';
+  document.getElementById('social__mobile__id').href = 'tel:#';
+  document.getElementById('social__linkedin__id').href = '#';
+  document.getElementById('social__github__id').href = '#'; 
+};
+
+resetForm.addEventListener('click', handleResetForm);
+
+
