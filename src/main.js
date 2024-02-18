@@ -85,7 +85,7 @@ function handleArrowUp(container) {
 const resetForm = document.querySelector('.js-reset-button');
 
 const handleResetForm = () => {
-  console.log ('The user clicked the button');
+  console.log ('The user has clicked the button');
   document.getElementById('card__title__id').innerHTML = 'Nombre Apellido';
   document.getElementById('card__job__id').innerHTML = 'Front-end developer';
   document.getElementById('card__img__id').src = 'https://i.pinimg.com/564x/da/f7/8c/daf78c186a9d4fa2bcfd1d84d9c956ca.jpg';

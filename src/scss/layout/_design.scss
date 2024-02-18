@@ -12,42 +12,38 @@
 .form__box{
   display: flex;
   align-items: center;
-  border: none; 
   margin: 5px;
+  border: none;
 }
 
 .form__heading {
+  width: 100%;
+  padding: 20px;
   display: flex;
- margin: 15px;
+  align-items: center;
+  gap: 15px;
  
 }
 
 .fa-object-ungroup {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  size: 20px;
   color: $color-primary-dark;
-  padding-right: 10px;
+  font-size: 21px;
 }
 
 .fa-chevron-up{
+  color: $color-secondary-dark-grey;
+  font-size: 20px;
+  padding-right: 20px;
   position: absolute;
   right: 0;
-  margin: 20px;
-  padding-right: 10px;
-  color:$color-secondary-dark-grey;
-  size: 18px;
 
 }
 
 .title {
-  font-size: 18px;
-  font-family: $font-main;
-  font-weight: 600;
-  padding: 20px;
-  padding-left: 10px;
   color: $color-secondary-dark-grey;
+  font-family: $font-main;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .color__selection--form {
