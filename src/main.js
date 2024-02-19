@@ -1,5 +1,5 @@
-'use strict';
 
+'use strict';
 const resetForm = document.querySelector('.js-reset-button');
 const buttonCreate = document.querySelector('.js_button_create_card');
 const arrowUpDesign = document.querySelector('.js-arrow-up-design');
@@ -9,7 +9,6 @@ const designContainer = document.querySelector('.js-color-container');
 const formContainer = document.querySelector('.js-form');
 const shareContainer = document.querySelector('.js-share');
 
-// ARROW 
 function closeOtherContainers(currentContainer) {
   if (currentContainer !== designContainer) {
     designContainer.classList.add('collapsed');
@@ -21,10 +20,14 @@ function closeOtherContainers(currentContainer) {
     shareContainer.classList.add('collapsed');
   }
 }
+
+function toggleContainer(container) {
+  container.classList.toggle('collapsed');
+}
 function handleArrowUp(container, arrow) {
   closeOtherContainers(container);
   toggleContainer(container);
-  arrow.classList.toggle('rotate-down'); 
+  arrow.classList.toggle('rotate-down'); // Agregamos o quitamos la clase rotate-down
 }
 arrowUpDesign.addEventListener('click', () => handleArrowUp(designContainer, arrowUpDesign));
 arrowUpForm.addEventListener('click', () => handleArrowUp(formContainer, arrowUpForm));
@@ -32,12 +35,12 @@ arrowUpShare.addEventListener('click', () => handleArrowUp(shareContainer, arrow
 
 
 
-// CREATE BUTTON
+// BUTTON CREATE
 const handleClickButtonCreate = (event) => {
   const dropDown = document.querySelector('.js_drop_down');
   event.preventDefault();
-  if (dropDown.classList.contains('hidden')) {
-    dropDown.classList.remove('hidden');
+  if (dropDown.classList.contains('collapsed')) {
+    dropDown.classList.remove('collapsed');
     buttonCreate.style.backgroundColor = '#d5d5d5';
     buttonCreate.style.pointerEvents = 'none';
   }
