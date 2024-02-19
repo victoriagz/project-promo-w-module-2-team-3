@@ -1,6 +1,6 @@
 
 .reset_button {
-    margin:  38px 200px 0px 45px;
+    margin:  40px 200px 0px 0px;
     font-size: 12px;
     width: 75px;
     height: 30px;
@@ -20,6 +20,17 @@
     background-color: $color-white;
     box-shadow: 1px 1px 5px #666;
 }
+
+
+.profile {
+    width: 50%;
+    height: 50%;
+    @media all and (min-width: 768px) { 
+        width: 50%;
+        height: 50%;
+}
+}
+
 
 .card_texts {
     border-left: solid 5px $color-secondary-medium;
