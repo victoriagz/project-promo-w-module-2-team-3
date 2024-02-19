@@ -5,3 +5,13 @@
 .change_grey_button {
   background-color: $color-text-footer;
 }
+  
+.rotate-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease; /* Esta línea hace que la animación sea suave */
+  }
+
+  .hidden {
+    display: none;
+  }
+  
