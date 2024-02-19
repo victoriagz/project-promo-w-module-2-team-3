@@ -1,8 +1,38 @@
 'use strict';
 
-// create-button
+const resetForm = document.querySelector('.js-reset-button');
 const buttonCreate = document.querySelector('.js_button_create_card');
+const arrowUpDesign = document.querySelector('.js-arrow-up-design');
+const arrowUpForm = document.querySelector('.js-arrow-up-form');
+const arrowUpShare = document.querySelector('.js-arrow-up-share');
+const designContainer = document.querySelector('.js-color-container');
+const formContainer = document.querySelector('.js-form');
+const shareContainer = document.querySelector('.js-share');
 
+// ARROW 
+function closeOtherContainers(currentContainer) {
+  if (currentContainer !== designContainer) {
+    designContainer.classList.add('collapsed');
+  }
+  if (currentContainer !== formContainer) {
+    formContainer.classList.add('collapsed');
+  }
+  if (currentContainer !== shareContainer) {
+    shareContainer.classList.add('collapsed');
+  }
+}
+function handleArrowUp(container, arrow) {
+  closeOtherContainers(container);
+  toggleContainer(container);
+  arrow.classList.toggle('rotate-down'); 
+}
+arrowUpDesign.addEventListener('click', () => handleArrowUp(designContainer, arrowUpDesign));
+arrowUpForm.addEventListener('click', () => handleArrowUp(formContainer, arrowUpForm));
+arrowUpShare.addEventListener('click', () => handleArrowUp(shareContainer, arrowUpShare));
+
+
+
+// CREATE BUTTON
 const handleClickButtonCreate = (event) => {
   const dropDown = document.querySelector('.js_drop_down');
   event.preventDefault();
@@ -15,9 +45,9 @@ const handleClickButtonCreate = (event) => {
 
 buttonCreate.addEventListener('click', handleClickButtonCreate);
 
-// reset-button
-const resetForm = document.querySelector('.js-reset-button');
 
+
+// reset-button
 const handleResetForm = () => {
   console.log ('The user has clicked the button');
   document.getElementById('card__title__id').innerHTML = 'Nombre Apellido';
@@ -30,5 +60,4 @@ const handleResetForm = () => {
 };
 
 resetForm.addEventListener('click', handleResetForm);
-
 

@@ -14,3 +14,11 @@
 - Entrega del primer sprint (sprint review): 22 de febrero
 - Entrega del segundo sprint (sprint review): 4 de marzo
 - Demo del proyecto (presentación final): 12 de marzo
+
+# Creatividad
+
+Aspectos BONUS a personalizar:
+
+- Usar un logo personalizado del equipo (o nombre del equipo) en el pie de página, tras la información de copyright
+- Utilizar un fondo personalizado en la previsualización de la tarjeta
+- Añadir más paletas a las definidas en el diseño, pero no eliminar las que os proponemos
