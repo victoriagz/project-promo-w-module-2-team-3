@@ -1,32 +1,31 @@
 footer {
   width: 100%;
   height: 18vh;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  bottom: 0;
+  padding-top: 15px;
   background-color: $color-white;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   text-align: center;
   border-top: 1px solid $color-secondary-light-grey;
   @media (min-width: 768px) {
-    height: 8vh;
+    height: 7vh;
     flex-direction: row;
-    padding: 20px 40px;
+    padding: 15px 40px;
     justify-content: space-between;
   }
   @media (min-width: 1024px) {
+    height: 9vh;
+    padding: 5px 40px;
+  }
+  @media (min-width: 1280px) {
     height: 8vh;
-    flex-direction: row;
-    padding: 8px 40px;
-    justify-content: space-between;
+    padding: 10px 40px;
   }
 
   span {
     font-family: $font-main;
     font-size: 14px;
-    height: 20px;
+    line-height: 20px;
     color: $color-text-footer;
     @media (min-width: 768px) {
       margin-top: 8px;
@@ -37,15 +36,14 @@ footer {
   }
 
   figure {
-    width: 100px;
+    width: 120px;
+    height: 40px;
     margin: auto;
-    padding-bottom: 5px;
     @media (min-width: 768px) {
       margin: 0;
     }
     img {
       width: 100%;
-      margin-bottom: 50px;
     }
   }
 }
