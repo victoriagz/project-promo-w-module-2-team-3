@@ -7,9 +7,10 @@
 }
   
 .rotate-down {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease; /* Esta línea hace que la animación sea suave */
-  }
+transform-origin: center;
+transform: rotateX(180deg);
+transition: transform 0.3s ease;
+}
 
   .hidden {
     display: none;
