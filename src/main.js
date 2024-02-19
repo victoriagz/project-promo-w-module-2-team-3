@@ -4,11 +4,11 @@
 const arrowUpDesign = document.querySelector('.js-arrow-up-design');
 const arrowUpForm = document.querySelector('.js-arrow-up-form');
 const arrowUpShare = document.querySelector('.js-arrow-up-share');
-const arrowUpShareAfter = document.querySelector('.js-arrow-up-share-after');
+//const arrowUpShareAfter = document.querySelector('.js-arrow-up-share-after');
 const designContainer = document.querySelector('.js-color-container');
 const formContainer = document.querySelector('.js-form');
 const shareContainer = document.querySelector('.js-share');
-const shareAfterContainer = document.querySelector('.js-share-after');
+//const shareAfterContainer = document.querySelector('.js-share-after');
 
 // Función genérica para mostrar u ocultar un contenedor
 function toggleContainer(container) {
@@ -24,7 +24,7 @@ function handleArrowUp(container) {
 arrowUpDesign.addEventListener('click', () => handleArrowUp(designContainer));
 arrowUpForm.addEventListener('click', () => handleArrowUp(formContainer));
 arrowUpShare.addEventListener('click', () => handleArrowUp(shareContainer));
-arrowUpShareAfter.addEventListener('click', () => handleArrowUp(shareAfterContainer));
+// arrowUpShareAfter.addEventListener('click', () => handleArrowUp(shareAfterContainer));
 
 // FUNCIONES QUE VAMOS A NECESITAR:
 
@@ -79,3 +79,17 @@ arrowUpShareAfter.addEventListener('click', () => handleArrowUp(shareAfterContai
 // }
 
 // arrowUpForm.addEventListener('click', handleArrowUpForm);
+
+const buttonCreate = document.querySelector('.js_button_create_card');
+
+const handleClickButtonCreate = (event) => {
+  const dropDown = document.querySelector('.js_drop_down');
+  event.preventDefault();
+  if (dropDown.classList.contains('hidden')) {
+    dropDown.classList.remove('hidden');
+    buttonCreate.style.backgroundColor = '#d5d5d5';
+    buttonCreate.style.pointerEvents = 'none';
+  }
+};
+
+buttonCreate.addEventListener('click', handleClickButtonCreate);
