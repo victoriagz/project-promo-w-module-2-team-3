@@ -5,6 +5,12 @@ const buttonCreate = document.querySelector('.js_button_create_card');
 const arrowUpDesign = document.querySelector('.js-arrow-up-design');
 const arrowUpForm = document.querySelector('.js-arrow-up-form');
 const arrowUpShare = document.querySelector('.js-arrow-up-share');
+<<<<<<< HEAD
+const designContainer = document.querySelector('.js-color-container');
+const formContainer = document.querySelector('.js-form');
+const shareContainer = document.querySelector('.js-share');
+=======
+//const arrowUpShareAfter = document.querySelector('.js-arrow-up-share-after'); DELETE ****
 const designContainer = document.querySelector('.js-color-container');
 const formContainer = document.querySelector('.js-form');
 const shareContainer = document.querySelector('.js-share');
@@ -39,6 +45,43 @@ arrowUpDesign.addEventListener('click', () => handleArrowUp(designContainer, arr
 arrowUpForm.addEventListener('click', () => handleArrowUp(formContainer, arrowUpForm));
 arrowUpShare.addEventListener('click', () => handleArrowUp(shareContainer, arrowUpShare));
 
+<<<<<<< HEAD
+=======
+// Asociar los botones de flecha con sus respectivos contenedores
+arrowUpDesign.addEventListener('click', () => handleArrowUp(designContainer));
+arrowUpForm.addEventListener('click', () => handleArrowUp(formContainer));
+arrowUpShare.addEventListener('click', () => handleArrowUp(shareContainer));
+//arrowUpShareAfter.addEventListener('click', () => handleArrowUp(shareAfterContainer)); DELETE ****
+
+
+
+// Rellenar automáticamente cardpreview al escribir en el formulario 
+const titlePreview = document.querySelector('.js_preview_title'); //variable del preview del nombre 
+const inputName = document.querySelector('.js_name'); //variable nombre del formulario
+const jobPreview = document.querySelector('.js_preview_job');
+const inputJob = document.querySelector('.js_job_position');
+
+
+//Evento 
+inputName.addEventListener('input', (event) => {
+  titlePreview.innerHTML = event.target.value;
+});
+inputJob.addEventListener('input', (event) => {
+  jobPreview.innerHTML = event.target.value;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> fillour_javascript
 
 // Rellenar automáticamente cardpreview al escribir en el formulario 
 inputName.addEventListener('input', (event) => {
