@@ -14,7 +14,6 @@
             flex-direction: row-reverse;
     }
     @media all and (min-width: 1024px) {
-        height: 100vh;
         width: 100%;
     }
     
@@ -37,9 +36,6 @@
             justify-content: center;
             position: relative;
     }
-    @media all and (min-width: 1024px) {
-        width: 80vh;
-    }
 }
 
 
@@ -50,7 +46,7 @@
             position: relative;
             width: 40vh;     
 }
-@media all and (min-width: 1024px) {
-    width: 100vh;
-}
+// @media all and (min-width: 1024px) {
+//     padding-right: 800px;
+// }
 }
