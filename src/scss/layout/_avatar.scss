@@ -1,0 +1,45 @@
+.action {
+    display: flex;
+    margin-top: 4px;
+  }
+
+
+  .action__upload-btn {
+        cursor: pointer;
+        text-align: center;
+        font-family: $font-main;
+        border-radius: 5px;
+        width: 140px;
+        height: 30px;
+        padding: 6px 13px;
+        color: white;
+        background-color: #e17334;
+        font-size: 15px ;
+        font-weight: 100;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    }
+  
+  .action__hiddenField {
+    /* Ocultamos el input de tipo "file" porque no podemos 
+    darle los estilos que queremos */
+    display: none;
+  }
+  
+  .profile_avatar {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .profile__image,
+  .profile__preview {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #ccc;
+  }
+  
+  .profile__preview {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+  }
