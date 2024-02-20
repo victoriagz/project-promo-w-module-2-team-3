@@ -35,18 +35,26 @@
             border-radius: 6px;
             justify-content: center;
             position: relative;
+            @media all and (min-width: 1024px) {
+                width: 60%;
+            }
     }
 }
 
+.form {
+    @media all and (min-width: 768px) { 
+    width: 60%;
+}
+@media all and (min-width: 1024px)  {
+    width: 40%;
+}
+}
 
 
 .select_section {
     width: 100%;
         @media all and (min-width: 768px) { 
             position: relative;
-            width: 40vh;     
+            width: 100%;     
 }
-// @media all and (min-width: 1024px) {
-//     padding-right: 800px;
-// }
 }
