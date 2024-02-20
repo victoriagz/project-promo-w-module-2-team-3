@@ -1,5 +1,5 @@
 
-const resetForm = document.querySelector('.js-reset-button');
+const buttonReset = document.querySelector('.js-reset-button');
 const buttonCreate = document.querySelector('.js_button_create_card');
 
 
@@ -19,7 +19,7 @@ buttonCreate.addEventListener('click', handleClickButtonCreate);
 
 // Reset-button Preview
 
-const handleResetForm = () => {
+const resetCard = () => {
   console.log('The user has clicked the button');
   document.getElementById('card__title__id').innerHTML = 'Nombre Apellido';
   document.getElementById('card__job__id').innerHTML = 'Front-end developer';
@@ -30,5 +30,21 @@ const handleResetForm = () => {
   document.getElementById('social__github__id').href = '#';
 };
 
-resetForm.addEventListener('click', handleResetForm);
+const resetForm = () => {
+  console.log('The user has clicked the button');
+  document.getElementById('name').value = '';
+  document.getElementById('job').value = '';
+  document.getElementById('image').style.backgroundImage = '';
+  document.getElementById('email').value = '';
+  document.getElementById('phone').value = '';
+  document.getElementById('linkedin').value = '';
+  document.getElementById('github').value = '';
+};
+
+const handleResetClick = () => {
+resetCard(); 
+resetForm();
+}
+
+buttonReset.addEventListener('click', handleResetClick);
 
