@@ -73,31 +73,32 @@ const handleResetForm = () => {
 resetForm.addEventListener('click', handleResetForm);
 
 //crear un objeto con cada paleta de colores:
-
-const palette1 = {
-  color1: '',
-  color2: '',
-  color3: '',
-};
-const palette2 = {
-  color1: '',
-  color2: '',
-  color3: '',
-};
-const palette3 = {
-  color1: '',
-  color2: '',
-  color3: '',
-};
+const colors = [
+  {
+    color1: '',
+    color2: '',
+    color3: '',
+  },
+  {
+    color1: '',
+    color2: '',
+    color3: '',
+  },
+  {
+    color1: '',
+    color2: '',
+    color3: '',
+  },
+];
 
 //crear una función genérica para todos los checkbutton pasando argumentos distintos
 function handleChangeColor(palette) {
-  titlePreview.style.color = palette.color1;
-  cardt_texts.style.backgroundColor = palette.color2;
-  social_card.style.color = palette.color3;
+  titlePreview.style.color = palette[0].color1;
+  card_texts.style.border-left = palette[0].color2;
+  social_card.style.color = palette[0].color3;
 }
 
 //crear un evento para cada checkbutton
-checkbutton1.addEventListener('click', handleChangeColor(palette1));
-checkbutton2.addEventListener('click', handleChangeColor(palette2));
-checkbutton3.addEventListener('click', handleChangeColor(palette3));
+checkbutton1.addEventListener('click', handleChangeColor(colors[0]));
+checkbutton2.addEventListener('click', handleChangeColor(colors[1]));
+checkbutton3.addEventListener('click', handleChangeColor(colors[2]));
