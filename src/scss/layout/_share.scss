@@ -1,12 +1,19 @@
-.share_section {
+                                                        .share_section {
   //width: 100%;
   min-width: 320px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   border: none;
 
   &__top_line {
     border-bottom: 1px solid $color-secondary-light-grey;
     padding-bottom: 10px;
+    margin-left: 7%;
+    width: 86%;
+  }
+
+  &__bottom_line0 {
+    border-bottom: 1px solid $color-secondary-light-grey;
+    padding-bottom: 20px;
     margin-left: 7%;
     width: 86%;
   }
@@ -53,6 +60,7 @@
     :hover {
       transform: scale(1.02);
     }
+    padding: 30px 0 15px 0;
 
     & button {
       border: none;
