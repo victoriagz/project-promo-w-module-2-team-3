@@ -9,7 +9,7 @@
   // height: 340px;
 }
 
-.form__box{
+.form__box {
   display: flex;
   align-items: center;
   margin: 5px;
@@ -22,7 +22,6 @@
   display: flex;
   align-items: center;
   gap: 15px;
- 
 }
 
 .fa-object-ungroup {
@@ -30,13 +29,12 @@
   font-size: 21px;
 }
 
-.fa-chevron-up{
+.fa-chevron-up {
   color: $color-secondary-dark-grey;
   font-size: 20px;
   padding-right: 20px;
   position: absolute;
   right: 0;
-
 }
 
 .title {
@@ -62,7 +60,6 @@
 }
 
 .color {
-
   &__input {
     display: flex;
   }
@@ -79,10 +76,10 @@
   }
 }
 
-.color__container--title{
+.color__container--title {
   position: absolute;
-  left:0;
-  padding-left: 50px; 
+  left: 0;
+  padding-left: 50px;
   color: $color-secondary-dark-grey;
   font-family: $font-main;
   size: 14px;
@@ -124,4 +121,3 @@
 .swatch9 {
   background-color: $color-light-grey-blue;
 }
-

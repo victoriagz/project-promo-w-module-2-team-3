@@ -1,46 +1,61 @@
 <fieldset class="form__box">
-    <legend class="form__heading">
+  <legend class="form__heading">
     <i class="far fa-object-ungroup" aria-hidden="true"></i>
     <h2 class="title">DISEÑA</h2>
     <i class="fa-solid fa-angle-up js-arrow-up-design" aria-hidden="true"></i>
-</legend>
-    <div class="color__container js-color-container collapsed">
-        <p class="color__container--title">COLORES</p>
-        <div class="color__container--group">
-            <input class="color__input" id="colorScheme1" type="radio" value="1" name="colorScheme" checked />
-            <label class="color__option" for="colorScheme1">
-                <div class="color__palette palette1">
-                    <div class="color__swatch swatch1"></div>
-                    <div class="color__swatch swatch2"></div>
-                    <div class="color__swatch swatch3"></div>
-                </div>
-            </label>
+  </legend>
+  <div class="color__container js-color-container collapsed">
+    <p class="color__container--title">COLORES</p>
+    <div class="color__container--group">
+      <input
+        class="color__input js-radio1"
+        id="colorScheme1"
+        type="radio"
+        value="1"
+        name="colorScheme"
+        checked
+      />
+      <label class="color__option" for="colorScheme1">
+        <div class="color__palette palette1">
+          <div class="color__swatch swatch1"></div>
+          <div class="color__swatch swatch2"></div>
+          <div class="color__swatch swatch3"></div>
         </div>
-
-        <div class="color__container--group">
-
-            <input class="color__input" id="colorScheme2" type="radio" value="2" name="colorScheme" />
-            <label class="color__option" for="colorScheme2">
-                <div class="color__palette palette2">
-                    <div class="color__swatch swatch4"></div>
-                    <div class="color__swatch swatch5"></div>
-                    <div class="color__swatch swatch6"></div>
-                </div>
-            </label>
-        </div>
-
-        <div class="color__container--group">
-
-            <input class="color__input" id="colorScheme3" type="radio" value="3" name="colorScheme" />
-            <label class="color__option" for="colorScheme3">
-                <div class="color__palette palette3">
-                    <div class="color__swatch swatch7"></div>
-                    <div class="color__swatch swatch8"></div>
-                    <div class="color__swatch swatch9"></div>
-                </div>
-            </label>
-        </div>
+      </label>
     </div>
 
-</fieldset>
+    <div class="color__container--group">
+      <input
+        class="color__input js-radio2"
+        id="colorScheme2"
+        type="radio"
+        value="2"
+        name="colorScheme"
+      />
+      <label class="color__option" for="colorScheme2">
+        <div class="color__palette palette2">
+          <div class="color__swatch swatch4"></div>
+          <div class="color__swatch swatch5"></div>
+          <div class="color__swatch swatch6"></div>
+        </div>
+      </label>
+    </div>
 
+    <div class="color__container--group">
+      <input
+        class="color__input js-radio3"
+        id="colorScheme3"
+        type="radio"
+        value="3"
+        name="colorScheme"
+      />
+      <label class="color__option" for="colorScheme3">
+        <div class="color__palette palette3">
+          <div class="color__swatch swatch7"></div>
+          <div class="color__swatch swatch8"></div>
+          <div class="color__swatch swatch9"></div>
+        </div>
+      </label>
+    </div>
+  </div>
+</fieldset>
