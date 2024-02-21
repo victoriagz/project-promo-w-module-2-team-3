@@ -44,6 +44,7 @@ const resetForm = () => {
 const handleResetClick = () => {
 resetCard(); 
 resetForm();
+handleChangeColor(palette1);
 }
 
 buttonReset.addEventListener('click', handleResetClick);

@@ -36,7 +36,21 @@ function handleChangeColor(palette) {
   }
 }
 
+
 //Creamos un evento por cada radiobutton, para que aplique una paleta determinada:
 radiobutton1.addEventListener('click', () => handleChangeColor(palette1));
 radiobutton2.addEventListener('click', () => handleChangeColor(palette2));
 radiobutton3.addEventListener('click', () => handleChangeColor(palette3));
+
+
+
+
+
+// BOTON RESET PARA VOLVER A PALETA 1
+const buttonResetPalette = document.querySelector('.js-reset-palette');
+function PaletteResetClick() {
+  handleChangeColor(palette1); 
+}
+buttonResetPalette.addEventListener('click', PaletteResetClick);
+
+
