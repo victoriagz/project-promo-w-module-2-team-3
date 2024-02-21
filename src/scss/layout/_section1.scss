@@ -10,10 +10,14 @@
     background-color: transparent;
     border: 1px solid white;
     color: #54585a;
-
-
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
 }
 
+.reset_button:hover {
+  background-color: white; 
+  color: black; 
+}
 
 .section_1 {
     width: 240px;
