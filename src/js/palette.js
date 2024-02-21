@@ -60,7 +60,7 @@
 // const radiobutton3 = document.querySelector('.js-radio3');
 
 //crear un evento para cada radio button
-radiobutton1.addEventListener('click', handleChangeColor(palette1));
-radiobutton2.addEventListener('click', handleChangeColor(palette2));
-radiobutton3.addEventListener('click', handleChangeColor(palette3));
-q;
+// radiobutton1.addEventListener('click', handleChangeColor(palette1));
+// radiobutton2.addEventListener('click', handleChangeColor(palette2));
+// radiobutton3.addEventListener('click', handleChangeColor(palette3));
+// q;
