@@ -78,7 +78,7 @@
       &__bottom_line {
         border-bottom: 1px solid $color-secondary-light-grey;
         width: 86%;
-        margin: 30px 7% 0 7%;
+        margin: 30px 23px 60px 23px;
       }
     }
   }
@@ -125,6 +125,13 @@
       font-family: $font-main;
       font-size: 14px;
     }
+  }
+
+  .bottom_line {
+    border-bottom: 1px solid $color-secondary-light-grey;
+    width: 86%;
+    margin: 30px 7% 0 7%;
+
   }
 
   .bottom_line2 {
