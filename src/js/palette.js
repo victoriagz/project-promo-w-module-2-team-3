@@ -50,7 +50,7 @@
 // };
 // //crear una función genérica para todos los checkbutton pasandole luego argumentos distintos
 // function handleChangeColor(palette) {
-//   card__title.style.color = palette.color1;
+//   titlePreview.style.color = palette.color1;
 //   card_texts.style.borderColor = palette.color2;
 //   social_card.style.color = palette.color3;
 // }
@@ -59,7 +59,8 @@
 // const radiobutton2 = document.querySelector('.js-radio2');
 // const radiobutton3 = document.querySelector('.js-radio3');
 
-// //crear un evento para cada radio button
-// radiobutton1.addEventListener('click', handleChangeColor(palette1));
-// radiobutton2.addEventListener('click', handleChangeColor(palette2));
-// radiobutton3.addEventListener('click', handleChangeColor(palette3));
+//crear un evento para cada radio button
+radiobutton1.addEventListener('click', handleChangeColor(palette1));
+radiobutton2.addEventListener('click', handleChangeColor(palette2));
+radiobutton3.addEventListener('click', handleChangeColor(palette3));
+q;
