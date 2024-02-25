@@ -16,7 +16,8 @@
       class="js_name"
       placeholder="Ej: Sally Hill"
       required
-      pattern="^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$"
+      pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s'-]+$"
+      title="Ingrese un nombre y apellidos válidos."
     />
 
     <!-- Job position -->
@@ -28,7 +29,8 @@
       class="js_job_position"
       placeholder="Ej: Front-end unicorn"
       required
-      pattern="^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$"
+      pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s'-]+$"
+      title="Ingrese una profesión válida."
     />
 
     <!-- IMAGEN -->
@@ -43,6 +45,7 @@
         class="collapsed js__profile-upload-btn"
         accept="image/*"
         required
+        title="Ingrese un formato de imagen válido."
       />
       <!-- con accept="image/*", sólo se previsualizará cuando el archivo sea formato de imagen -->
       <div class="profile__preview js__profile-preview"></div>
@@ -58,6 +61,7 @@
       placeholder="sally-hill@gmail.com"
       required
       pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+      title="Ingrese un formato válido."
     />
 
     <!-- Phone Number -->
@@ -69,7 +73,8 @@
       class="js_phone"
       placeholder="Ej: 555-55-55-55"
       required
-      pattern="^[0-9]{9}$"
+      pattern="^\+?\d+(\.\d+)?$"
+      title="Ingrese un número válido en formato español o internacional."
     />
 
     <!-- Linkedin -->
@@ -82,6 +87,7 @@
       placeholder="Ej: linkedin.com/in/sally.hill"
       required
       pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+      title="Ingrese un formato válido."
     />
 
     <!-- Github -->
@@ -94,6 +100,7 @@
       placeholder="Ej: @sally-hill"
       required
       pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+      title="Ingrese un formato válido."
     />
 
     <input type="submit" id="hiddenSubmit" style="display: none" />
