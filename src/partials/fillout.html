@@ -9,15 +9,15 @@
 
   <div class="form__design__input js-form collapsed">
     <!-- Complete name -->
-    <label class="form__label" for="name">Nombre completo</label>
+    <label class="form__label" for="name">Nombre completo<span class="asterisk">*</span></label>
     <input type="text" id="name" name="name" class="js_name" placeholder="Ej: Sally Hill" required/>
 
     <!-- Job position -->
-    <label class="form__label" for="job">Puesto</label>
+    <label class="form__label" for="job">Puesto<span class="asterisk">*</span></label>
     <input type="text" id="job" name="job" class="js_job_position" placeholder="Ej: Front-end unicorn" required/>
 
     <!-- IMAGEN -->
-    <label class="form__label form__photolabel" for="image">Imagen de perfil</label>
+    <label class="form__label" for="image">Imagen de perfil</label>
     <div class="action">
       <label class="action__upload-btn" for="image">Añadir imagen</label>
       <input type="file" name="" id="image" style="display: none" class="collapsed js__profile-upload-btn" required />
@@ -27,11 +27,11 @@
 
 
     <!-- Email -->
-    <label class="form__label" for="email">Email</label>
+    <label class="form__label" for="email">Email<span class="asterisk">*</span></label>
     <input type="email" id="email" name="email" class="js_email" placeholder="sally-hill@gmail.com" required />
 
     <!-- Phone Number -->
-    <label class="form__label" for="phone">Teléfono</label>
+    <label class="form__label" for="phone">Teléfono<span class="asterisk">*</span></label>
     <input type="tel" id="phone" name="phone" class="js_phone" placeholder="Ej: 555-55-55-55" required/>
 
     <!-- Linkedin -->
@@ -41,6 +41,9 @@
     <!-- Github -->
     <label class="form__label" for="github">Github</label>
     <input type="text" id="github" name="github" class="js_github" placeholder="Ej: @sally-hill" required />
+
+    <!-- Message: required to fill out field -->
+    <p class="form__label js-field-required-message"></span></p>
 
     <input type="submit" id="hiddenSubmit" style="display: none;" />
  
