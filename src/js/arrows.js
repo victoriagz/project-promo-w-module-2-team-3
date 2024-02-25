@@ -67,48 +67,53 @@ function closeOtherContainers(currentContainer) {
   }
 
 
-  function handleArrowUpShare () {
-    requiredMessage.innerHTML = ''; 
-    console.log('entra'); 
-
-    if (inputNameValue && inputJobValue && inputEmailValue && inputPhoneValue){
-      console.log('hey'); 
-      requiredMessage.innerHTML = 'Campos rellenos'; 
-
-    } else if (!= inputEmailValue.includes('@')){
-      console.log('works'); 
-      requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
-      //cambiar color casilla a rojo
-    } else if (isNaN(inputPhoneValue)){
-      console.log('mermaid'); 
-      requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
-      //cambiar color casilla a rojo
-    } else {
-      console.log('dog'); 
-      requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
-      //cambiar color casilla a rojo
-    }
-  }
-
   // function handleArrowUpShare () {
   //   requiredMessage.innerHTML = ''; 
+  //   console.log('entra'); 
 
-  //   if (inputName.value == '' || inputJob.value == '' || inputEmail.value == '' || inputPhone.value == ''){
+  //   if (inputNameValue && inputJobValue && inputEmailValue && inputPhoneValue){
   //     console.log('hey'); 
-  //     //requiredMessage.classList.remove('collapsed'); 
-  //     requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
-  //     //cambiar color casilla a rojo
-  //   } else if (inputEmailValue.includes('@')){
+  //     requiredMessage.innerHTML = 'Campos rellenos'; 
+
+  //   } else if (!inputEmailValue.includes('@')){
   //     console.log('works'); 
   //     requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
   //     //cambiar color casilla a rojo
-  //   } else if (isNaN(inputPhoneValue)){
+  //   } else if (inputPhoneValue = NaN){
+  //     console.log('mermaid'); 
   //     requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
   //     //cambiar color casilla a rojo
   //   } else {
-  //     handleArrowUp(); 
+  //     console.log('dog'); 
+  //     requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
+  //     //cambiar color casilla a rojo
   //   }
   // }
+
+function handleArrowUpShare () {
+  requiredMessage.innerHTML = ''; 
+  console.log('0'); 
+  const emptyField = inputNameValue == '' || inputJobValue == '' || inputEmailValue == '' || inputPhoneValue == '';
+  const filledOutForm = inputNameValue && inputJobValue && inputEmailValue && inputPhoneValue;
+
+  if (!inputEmail.value.includes('@')) {    
+    console.log('2'); 
+    requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
+    //cambiar color casilla a rojo
+  } else if (isNaN(inputPhoneValue)) {
+    console.log('3'); 
+    requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
+    //cambiar color casilla a rojo
+  } else if (emptyField) {
+    console.log('1'); 
+    //requiredMessage.classList.remove('collapsed'); 
+    requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
+    //cambiar color casilla a rojo
+  } else if (filledOutForm) {
+    console.log('4'); 
+    handleArrowUp(); 
+  }
+}
 
  
   arrowUpDesign.addEventListener('click', () => handleArrowUp(designContainer, arrowUpDesign));
