@@ -27,31 +27,41 @@ const inputPhoneValue = inputPhone.value;
 
 //Función cambiar el color casilla a rojo
 function changeFieldColor () {
-  inputName.style.border = '1px solid #ad6868';
-  input
-  inputJob.style.border = '1px solid #ad6868';
-  inputEmail.style.border = '1px solid #ad6868';
-  inputForm.style.border = '1px solid #ad6868';
+  if (inputNameValue === '') {
+    inputName.style.border = '1px solid #ad6868';
+  }
+  if (inputJobValue === '') {
+    inputJob.style.border = '1px solid #ad6868';
+  }
+  if (inputEmailValue === '') {
+    inputEmail.style.border = '1px solid #ad6868';
+  }
+  if (inputPhoneValue === '') {
+  inputPhone.style.border = '1px solid #ad6868';
+  }
 }
 
 function handleArrowUpShare () {
   requiredMessage.innerHTML = ''; 
   console.log('0'); 
-  //const emptyField = inputNameValue == '' || inputJobValue == '' || inputEmailValue == '' || inputPhoneValue == '';
-  const filledOutForm = inputNameValue && inputJobValue && inputEmailValue && inputPhoneValue;
+  const emptyField = inputNameValue == '' || inputJobValue == '' || inputEmailValue == '' || inputPhoneValue == '';
+  //const filledOutForm = inputNameValue && inputJobValue && inputEmailValue && inputPhoneValue;
   
-  if (!inputEmail.value.includes('@')) {    
-    console.log('2'); 
-    requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
-    inputEmail.style.border = '1px solid #ad6868';
+  if (emptyField) {
+    console.log('1'); 
+    requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
+    changeFieldColor(); 
+
   } else if (typeof inputPhoneValue !== 'number') { 
     console.log('3'); 
     requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
     inputPhone.style.border = '1px solid #ad6868';
-  } else if (!filledOutForm) {
-    console.log('1'); 
-    requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
-    changeFieldColor(); 
+
+  } else if (!inputEmail.value.includes('@')) {    
+    console.log('2'); 
+    requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
+    inputEmail.style.border = '1px solid #ad6868';
+
   } else {
     handleArrowUp(shareContainer, arrowUpShare);  
   }
