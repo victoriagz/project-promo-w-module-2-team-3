@@ -12,19 +12,17 @@ const dropDownSection = document.querySelector('.js_drop_down');
 const dropDownSectionCollapsed = dropDownSection.classList.add('collapsed');
 
 //Form fields
-const inputName = document.querySelector('.js-name');
-const inputJob = document.querySelector('.js-job');
-const inputEmail = document.querySelector('.js-email');
-const inputPhone = document.querySelector('.js-phone');
+const inputName = document.querySelector('.js_name');
+const inputJob = document.querySelector('.js_job');
+const inputEmail = document.querySelector('.js_email');
+const inputPhone = document.querySelector('.js_phone');
 const requiredMessage = document.querySelector('.js-field-required-message');
-const titlePreview = document.querySelector('.js_preview_title'); //variable del preview del nombre
-const jobPreview = document.querySelector('.js_preview_job');
 
 //Form fields values 
-// const inputNameValue = inputName.value; 
-// const inputJobValue = inputJob.value; 
-// const inputEmailValue = inputEmail.value; 
-// const inputPhoneValue = inputPhone.value; 
+const inputNameValue = inputName.value; 
+const inputJobValue = inputJob.value; 
+const inputEmailValue = inputEmail.value; 
+const inputPhoneValue = inputPhone.value; 
 
 // Rellenar automáticamente cardpreview al escribir en el formulario
 inputName.addEventListener('input', (event) => {
@@ -68,22 +66,49 @@ function closeOtherContainers(currentContainer) {
     arrow.classList.toggle('rotate-down'); // Agregamos o quitamos la clase rotate-down
   }
 
+
   function handleArrowUpShare () {
-    if (inputName.value == '' || inputJob.value == '' || inputEmail.value == '' || inputPhonealue == ''){
+    requiredMessage.innerHTML = ''; 
+    console.log('entra'); 
+
+    if (inputNameValue && inputJobValue && inputEmailValue && inputPhoneValue){
       console.log('hey'); 
-      //requiredMessage.classList.remove('collapsed'); 
-      requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
-      //cambiar color casilla a rojo
-    } else if (inputEmailValue != inputEmailValue.contains('@')){
+      requiredMessage.innerHTML = 'Campos rellenos'; 
+
+    } else if (!= inputEmailValue.includes('@')){
+      console.log('works'); 
       requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
       //cambiar color casilla a rojo
-    } else if (inputPhoneValue != inputEmailValue.contains(Number)){
+    } else if (isNaN(inputPhoneValue)){
+      console.log('mermaid'); 
       requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
       //cambiar color casilla a rojo
     } else {
-      handleArrowUp(); 
+      console.log('dog'); 
+      requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
+      //cambiar color casilla a rojo
     }
   }
+
+  // function handleArrowUpShare () {
+  //   requiredMessage.innerHTML = ''; 
+
+  //   if (inputName.value == '' || inputJob.value == '' || inputEmail.value == '' || inputPhone.value == ''){
+  //     console.log('hey'); 
+  //     //requiredMessage.classList.remove('collapsed'); 
+  //     requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
+  //     //cambiar color casilla a rojo
+  //   } else if (inputEmailValue.includes('@')){
+  //     console.log('works'); 
+  //     requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
+  //     //cambiar color casilla a rojo
+  //   } else if (isNaN(inputPhoneValue)){
+  //     requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
+  //     //cambiar color casilla a rojo
+  //   } else {
+  //     handleArrowUp(); 
+  //   }
+  // }
 
  
   arrowUpDesign.addEventListener('click', () => handleArrowUp(designContainer, arrowUpDesign));
