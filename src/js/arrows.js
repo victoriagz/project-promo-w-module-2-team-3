@@ -17,7 +17,7 @@ const inputJob = document.querySelector('.js_job');
 const inputEmail = document.querySelector('.js_email');
 const inputPhone = document.querySelector('.js_phone');
 const requiredMessage = document.querySelector('.js-field-required-message');
-const requiredFields = document.querySelectorAll('required'); //variable que recoge todos los elementos con la clase required
+//const requiredFields = form.querySelectorAll('[required]'); //variable que recoge todos los elementos con la clase required
 
 //Form fields values 
 const inputNameValue = inputName.value; 
@@ -25,51 +25,59 @@ const inputJobValue = inputJob.value;
 const inputEmailValue = inputEmail.value; 
 const inputPhoneValue = inputPhone.value; 
 
+//Función cambiar el color casilla a rojo
+function changeFieldColor () {
+  inputName.style.border = '1px solid #ad6868';
+  input
+  inputJob.style.border = '1px solid #ad6868';
+  inputEmail.style.border = '1px solid #ad6868';
+  inputForm.style.border = '1px solid #ad6868';
+}
 
-  // function handleArrowUpShare () {
-  //   requiredMessage.innerHTML = ''; 
-  //   console.log('0'); 
-  //   //let emptyField = inputNameValue == '' || inputJobValue == '' || inputEmailValue == '' || inputPhoneValue == '';
-  //   let filledOutForm = inputNameValue && inputJobValue && inputEmailValue && inputPhoneValue;
+function handleArrowUpShare () {
+  requiredMessage.innerHTML = ''; 
+  console.log('0'); 
+  //const emptyField = inputNameValue == '' || inputJobValue == '' || inputEmailValue == '' || inputPhoneValue == '';
+  const filledOutForm = inputNameValue && inputJobValue && inputEmailValue && inputPhoneValue;
   
-  //   if (!inputEmail.value.includes('@')) {    
-  //     console.log('2'); 
-  //     requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
-  //     //cambiar color casilla a rojo
-  //   } else if (typeof inputPhoneValue !== 'number') { //= else if (isNaN(inputPhoneValue)) {
-  //     console.log('3'); 
-  //     requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
-  //     //cambiar color casilla a rojo
-  //   } else if (!filledOutForm) {
-  //     console.log('1'); 
-  //     requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
-  //     //cambiar color casilla a rojo
-  //   } else {
-  //     handleArrowUp(shareContainer, arrowUpShare);  
-  //   }
-  // }
+  if (!inputEmail.value.includes('@')) {    
+    console.log('2'); 
+    requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
+    inputEmail.style.border = '1px solid #ad6868';
+  } else if (typeof inputPhoneValue !== 'number') { 
+    console.log('3'); 
+    requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
+    inputPhone.style.border = '1px solid #ad6868';
+  } else if (!filledOutForm) {
+    console.log('1'); 
+    requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
+    changeFieldColor(); 
+  } else {
+    handleArrowUp(shareContainer, arrowUpShare);  
+  }
+}
 
   //Función manejadora del evento flecha de comparte 
-  function handleArrowUpShare () {
-    console.log('0');
-    requiredMessage.innerHTML = ''; 
+  // function handleArrowUpShare () {
+  //   console.log('0');
+  //   requiredMessage.innerHTML = ''; 
     
-    //Bucle 
-    for (const field of requiredFields) {
-      console.log('1'); 
+  //   //Bucle 
+  //   for (const field of requiredFields) {
+  //     console.log('1'); 
 
-      if (field.value === '') {
-        console.log('2');
-        field.value.border = '1px solid red;'
-        requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
+  //     if (field.value === '') {
+  //       console.log('2');
+  //       field.value.border = '1px solid red';
+  //       requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
 
-      } else {
-        console.log('3');
-        field.value.border = ''; 
-        handleArrowUp(shareContainer, arrowUpShare);  
-      }
-    }
-  }
+  //     } else {
+  //       console.log('3');
+  //       field.value.border = ''; 
+  //       handleArrowUp(shareContainer, arrowUpShare);  
+  //     }
+  //   }
+  // }
 
   
   function closeOtherContainers(currentContainer) {
