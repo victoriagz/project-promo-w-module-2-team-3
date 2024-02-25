@@ -35,6 +35,7 @@
   padding-right: 20px;
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 
 .title {
@@ -42,6 +43,11 @@
   font-family: $font-main;
   font-size: 18px;
   font-weight: 600;
+}
+.title:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.5s ease;
 }
 
 .color__selection--form {
