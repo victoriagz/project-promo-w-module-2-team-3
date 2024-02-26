@@ -51,11 +51,16 @@ const resetPreviewImage = () => {
   profilePreview.style.backgroundImage = 'none';
 }
 
+// resetMainImage
+const resetMainImage = () => {
+  profileImage.style.backgroundImage = "url(https://img.freepik.com/fotos-premium/adorable-perrito-bonito-color-marron-primer-plano_78967-4667.jpg)";
+}
 const handleResetButtonClick = () => {
   resetCard();
   resetForm()
   resetPalette();
   resetPreviewImage();
+  resetMainImage();
 };
 
 buttonReset.addEventListener('click', handleResetButtonClick);
