@@ -25,12 +25,12 @@
 }
 
 .fa-object-ungroup {
-  color: $color-primary-dark;
+  color: #fec89a;
   font-size: 21px;
 }
 
-.fa-chevron-up {
-  color: $color-secondary-dark-grey;
+.fa-paw {
+  color: #604d53;
   font-size: 20px;
   padding-right: 20px;
   position: absolute;
@@ -38,7 +38,7 @@
 }
 
 .title {
-  color: $color-secondary-dark-grey;
+  color: #4a4e69;
   font-family: $font-main;
   font-size: 18px;
   font-weight: 600;
@@ -74,6 +74,12 @@
     height: 25px;
     display: inline-block;
   }
+}
+
+
+
+.color__palette{
+  border: 1px solid black;
 }
 
 .color__container--title {
@@ -120,4 +126,47 @@
 
 .swatch9 {
   background-color: $color-light-grey-blue;
+}
+
+
+// ================PALETTE 4 PINK =================
+.swatch10 {
+  background-color: #ffc8dd;
+}
+
+.swatch11 {
+  background-color: #ffafcc;
+}
+
+.swatch12 {
+  background-color: #bde0fe;
+}
+
+// ================PALETTE 5 BLUE=================
+
+.swatch13 {
+  background-color: #4a8fe7;
+}
+
+.swatch14 {
+  background-color: #59d2fe;
+}
+
+.swatch15 {
+  background-color: #44e5e7;
+}
+
+
+// ================PALETTE 6 PURPLE=================
+
+.swatch16 {
+  background-color: #e2dada;
+}
+
+.swatch17 {
+  background-color: #620097;
+}
+
+.swatch18 {
+  background-color: #370075;
 }
