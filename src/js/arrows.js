@@ -9,63 +9,93 @@ const designContainer = document.querySelector('.js-color-container');
 const formContainer = document.querySelector('.js-form');
 const shareContainer = document.querySelector('.js-share');
 const dropDownSection = document.querySelector('.js_drop_down');
-const dropDownSectionCollapsed = dropDownSection.classList.add('collapsed');
+//const dropDownSectionCollapsed = dropDownSection.classList.add('collapsed');
 
 //Form fields
-const inputName = document.querySelector('.js_name');
-const inputJob = document.querySelector('.js_job');
-const inputEmail = document.querySelector('.js_email');
-const inputPhone = document.querySelector('.js_phone');
+ const inputName = document.querySelector('.js_name');
+ const inputJob = document.querySelector('.js_job');
+// const inputEmail = document.querySelector('.js_email');
+// const inputPhone = document.querySelector('.js_phone');
+const requiredFields = document.querySelectorAll('.js-required'); //es un array
 const requiredMessage = document.querySelector('.js-field-required-message');
 //const requiredFields = form.querySelectorAll('[required]'); //variable que recoge todos los elementos con la clase required
 
 //Form fields values 
-const inputNameValue = inputName.value; 
-const inputJobValue = inputJob.value; 
-const inputEmailValue = inputEmail.value; 
-const inputPhoneValue = inputPhone.value; 
-
-//Función cambiar el color casilla a rojo
-function changeFieldColor () {
-  if (inputNameValue === '') {
-    inputName.style.border = '1px solid #ad6868';
-  }
-  if (inputJobValue === '') {
-    inputJob.style.border = '1px solid #ad6868';
-  }
-  if (inputEmailValue === '') {
-    inputEmail.style.border = '1px solid #ad6868';
-  }
-  if (inputPhoneValue === '') {
-  inputPhone.style.border = '1px solid #ad6868';
-  }
-}
+//const inputRequiredValue = inputRequired.value; 
+// const inputNameValue = inputName.value; 
+// const inputJobValue = inputJob.value; 
+// const inputEmailValue = inputEmail.value; 
+// const inputPhoneValue = inputPhone.value; 
 
 function handleArrowUpShare () {
-  requiredMessage.innerHTML = ''; 
-  console.log('0'); 
-  //const emptyField = inputNameValue == '' || inputJobValue == '' || inputEmailValue == '' || inputPhoneValue == '';
-  //const filledOutForm = inputNameValue && inputJobValue && inputEmailValue && inputPhoneValue;
-  
-  if (inputNameValue == '' || inputJobValue == '' || inputEmailValue == '' || inputPhoneValue == '') {
-    console.log('1'); 
-    requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
-    changeFieldColor(); 
 
-  } else if (typeof inputPhoneValue !== 'number') { 
-    console.log('3'); 
-    requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
-    inputPhone.style.border = '1px solid #ad6868';
+  for (const requiredField of requiredFields) {
+    
+    const emailField = requiredFields[2]; 
+    const emailFieldValue = emailField.value; 
 
-  } else if (!inputEmail.value.includes('@')) {    
-    console.log('2'); 
-    requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
-    inputEmail.style.border = '1px solid #ad6868';
+    const phoneField = requiredFields[3]; 
+    const phoneFieldValue = parseFloat(phoneField.value); //para convertir el string a number porque todos los valores del input vienen como strings 
 
-  } else {
-    handleArrowUp(shareContainer, arrowUpShare);  
+    if (requiredField.value === '') {
+      requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
+      requiredField.style.border = '1px solid #ad6868';
+    } else if (!emailFieldValue.includes('@')) {  
+      requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
+      emailField.style.border = '1px solid #ad6868';
+    } else if (isNaN(phoneFieldValue)) {  
+      console.log('soy string'); 
+      requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
+      phoneField.style.border = '1px solid #ad6868';
+    } else {
+      handleArrowUp (shareContainer, arrowUpShare);
+      console.log('hey');  
+      break;
+    }
   }
 }
+
+//Función cambiar el color casilla a rojo
+// function changeFieldColor () {
+//   if (inputNameValue === '') {
+//     inputName.style.border = '1px solid #ad6868';
+//   }
+//   if (inputJobValue === '') {
+//     inputJob.style.border = '1px solid #ad6868';
+//   }
+//   if (inputEmailValue === '') {
+//     inputEmail.style.border = '1px solid #ad6868';
+//   }
+//   if (inputPhoneValue === '') {
+//   inputPhone.style.border = '1px solid #ad6868';
+//   }
+// }
+
+// function handleArrowUpShare () {
+//   requiredMessage.innerHTML = ''; 
+//   console.log('0'); 
+//   //const emptyField = inputNameValue == '' || inputJobValue == '' || inputEmailValue == '' || inputPhoneValue == '';
+//   //const filledOutForm = inputNameValue && inputJobValue && inputEmailValue && inputPhoneValue;
+  
+//   if (inputNameValue == '' || inputJobValue == '' || inputEmailValue == '' || inputPhoneValue == '') {
+//     console.log('1'); 
+//     requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
+//     changeFieldColor(); 
+
+//   } else if (typeof inputPhoneValue !== 'number') { 
+//     console.log('3'); 
+//     requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
+//     inputPhone.style.border = '1px solid #ad6868';
+
+//   } else if (!inputEmail.value.includes('@')) {    
+//     console.log('2'); 
+//     requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
+//     inputEmail.style.border = '1px solid #ad6868';
+
+//   } else {
+//     handleArrowUp(shareContainer, arrowUpShare);  
+//   }
+// }
 
   //Función manejadora del evento flecha de comparte 
   // function handleArrowUpShare () {
@@ -109,7 +139,7 @@ function handleArrowUpShare () {
 
   function closeShareContainer (){
     if (shareContainer.classList.contains('collapsed')){
-      if(dropDownSection !== dropDownSectionCollapsed){
+      if(!dropDownSection.classList.contains('collapsed')){
         dropDownSection.classList.add('collapsed');
       }
     }
@@ -117,15 +147,20 @@ function handleArrowUpShare () {
  
 
 function handleArrowUp(container, arrow) {
+  console.log('0'); 
   closeOtherContainers(container);
+  console.log('1'); 
   toggleContainer(container); 
+  console.log('2');  
   closeShareContainer(); 
+  console.log('3'); 
   arrow.classList.toggle('rotate-down'); // Agregamos o quitamos la clase rotate-down
+  console.log('4'); 
 }
 
  
   arrowUpDesign.addEventListener('click', () => handleArrowUp(designContainer, arrowUpDesign));
   arrowUpForm.addEventListener('click', () => handleArrowUp(formContainer, arrowUpForm));
   arrowUpShare.addEventListener('click', () => handleArrowUpShare());
-  //arrowUpShare.addEventListener('click', () => handleArrowUp(shareContainer, arrowUpShare));
+
   
