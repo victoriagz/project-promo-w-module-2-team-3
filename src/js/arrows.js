@@ -27,12 +27,12 @@ const jobPreview = document.querySelector('.js_preview_job');
 // const inputPhoneValue = inputPhone.value; 
 
 // Rellenar automáticamente cardpreview al escribir en el formulario
-inputName.addEventListener('input', (event) => {
-    titlePreview.innerHTML = event.target.value;
-  });
-  inputJob.addEventListener('input', (event) => {
-    jobPreview.innerHTML = event.target.value;
-  });
+// inputName.addEventListener('input', (event) => {
+//     titlePreview.innerHTML = event.target.value;
+//   });
+//   inputJob.addEventListener('input', (event) => {
+//     jobPreview.innerHTML = event.target.value;
+//   });
 
 function closeOtherContainers(currentContainer) {
     if (currentContainer !== designContainer) {
@@ -68,26 +68,26 @@ function closeOtherContainers(currentContainer) {
     arrow.classList.toggle('rotate-down'); // Agregamos o quitamos la clase rotate-down
   }
 
-  function handleArrowUpShare () {
-    if (inputName.value == '' || inputJob.value == '' || inputEmail.value == '' || inputPhonealue == ''){
-      console.log('hey'); 
-      //requiredMessage.classList.remove('collapsed'); 
-      requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
-      //cambiar color casilla a rojo
-    } else if (inputEmailValue != inputEmailValue.contains('@')){
-      requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
-      //cambiar color casilla a rojo
-    } else if (inputPhoneValue != inputEmailValue.contains(Number)){
-      requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
-      //cambiar color casilla a rojo
-    } else {
-      handleArrowUp(); 
-    }
-  }
+  // function handleArrowUpShare () {
+  //   if (inputName.value == '' || inputJob.value == '' || inputEmail.value == '' || inputPhonealue == ''){
+  //     console.log('hey'); 
+  //     //requiredMessage.classList.remove('collapsed'); 
+  //     requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
+  //     //cambiar color casilla a rojo
+  //   } else if (inputEmailValue != inputEmailValue.contains('@')){
+  //     requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
+  //     //cambiar color casilla a rojo
+  //   } else if (inputPhoneValue != inputEmailValue.contains(Number)){
+  //     requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
+  //     //cambiar color casilla a rojo
+  //   } else {
+  //     handleArrowUp(); 
+  //   }
+  // }
 
  
   arrowUpDesign.addEventListener('click', () => handleArrowUp(designContainer, arrowUpDesign));
   arrowUpForm.addEventListener('click', () => handleArrowUp(formContainer, arrowUpForm));
-  arrowUpShare.addEventListener('click', (handleArrowUpShare)); 
-  //arrowUpShare.addEventListener('click', () => handleArrowUp(shareContainer, arrowUpShare));
+  //arrowUpShare.addEventListener('click', (handleArrowUpShare)); 
+  arrowUpShare.addEventListener('click', () => handleArrowUp(shareContainer, arrowUpShare));
   
