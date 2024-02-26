@@ -1,4 +1,3 @@
-
 const arrowUpDesign = document.querySelector('.js-arrow-up-design');
 const arrowUpForm = document.querySelector('.js-arrow-up-form');
 const arrowUpShare = document.querySelector('.js-arrow-up-share');
@@ -84,8 +83,6 @@ textShare.addEventListener('click', () => handleText(shareContainer, textShare))
       }
     }
   }
-
- 
 
   function handleArrowUp(container, arrow) {
     closeOtherContainers(container);

@@ -3,6 +3,7 @@ const buttonReset = document.querySelector('.js-reset-button');
 const buttonCreate = document.querySelector('.js_button_create_card');
 
 
+
 // BUTTON CREATE
 const handleClickButtonCreate = (event) => {
   const dropDown = document.querySelector('.js_drop_down');
@@ -22,7 +23,7 @@ const resetCard = () => {
   console.log('Resetting card');
   document.getElementById('card__title__id').innerHTML = 'Nombre Apellido';
   document.getElementById('card__job__id').innerHTML = 'Front-end developer';
-  document.getElementById('card__img__id').style.backgroundImage = 'url(https://i.pinimg.com/564x/da/f7/8c/daf78c186a9d4fa2bcfd1d84d9c956ca.jpg)';
+  document.getElementById('card__img__id').style.backgroundImage = "/images/Pets.pictures/1.png";
   document.getElementById('social__email__id').href = '#';
   document.getElementById('social__mobile__id').href = 'tel:#';
   document.getElementById('social__linkedin__id').href = '#';
@@ -41,26 +42,25 @@ const resetForm = () => {
   document.getElementById('github').value = '';
 };
 
-// resetPalette
-const resetPalette = () => {
+// resetRadio
+const resetRadio = () => {
   document.getElementById('colorScheme1').checked = true;
 };
 
-// resetProfileImage
+// resetPreviewImage
 const resetPreviewImage = () => {
   profilePreview.style.backgroundImage = 'none';
 }
+// resetBackgroundSection
+const resetBackgroundSection = document.querySelector('.js-card_section'); 
+backgroundSection.style.backgroundImage = 'url("https://i.pinimg.com/736x/c8/d5/09/c8d509ae55bbef2cc85a5245a04d850e.jpg")';
 
-// resetMainImage
-// const resetMainImage = () => {
-//   profileImage.style.backgroundImage.
-// }
 const handleResetButtonClick = () => {
   resetCard();
   resetForm()
-  resetPalette();
+  resetRadio();
   resetPreviewImage();
-  // resetMainImage();
+  resetBackgroundSection();
 };
 
 buttonReset.addEventListener('click', handleResetButtonClick);

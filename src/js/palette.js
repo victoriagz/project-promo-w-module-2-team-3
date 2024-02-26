@@ -40,9 +40,8 @@ const radiobutton5 = document.querySelector('.js-radio5');
 const radiobutton6 = document.querySelector('.js-radio6');
 
 // Obtenemos del HTML las variables de las partes de la tarjeta para pintarlas:
-const titleCard = document.querySelector('.js_preview_title');
-const borderCard = document.querySelector('.js_border_card');
-const circleCard = document.querySelectorAll('.js_circle_card');
+
+
 
 // Creamos una función genérica para todos los radiobuttons pasando luego argumentos distintos.
 // Aplicamos un bucle for en circleCard, porque con querySelectorAll hemos creado un array
@@ -112,8 +111,9 @@ button4.addEventListener('click', () => onClick4());
 button5.addEventListener('click', () => onClick5());
 button6.addEventListener('click', () => onClick6());
 
-
-
-
-
-
+// BOTON RESET PARA VOLVER A PALETA 1
+const buttonResetPalette = document.querySelector('.js-reset-palette');
+function PaletteResetClick() {
+  handleChangeColor(palette1); 
+}
+buttonResetPalette.addEventListener('click', PaletteResetClick);
