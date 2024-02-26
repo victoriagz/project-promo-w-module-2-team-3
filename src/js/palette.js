@@ -74,17 +74,6 @@ const button5 = document.querySelector('.js-button5');
 const button6 = document.querySelector('.js-button6');
 const backgroundSection = document.querySelector('.js-card_section');
 
-
-// BOTON RESET PARA VOLVER A PALETA 1
-const buttonResetPalette = document.querySelector('.js-reset-palette');
-function PaletteResetClick() {
-  handleChangeColor(palette1); 
-  ChangeImage.src = "/images/Pets.pictures/1.png"
-  backgroundSection.style.backgroundImage = 'url("https://i.pinimg.com/736x/c8/d5/09/c8d509ae55bbef2cc85a5245a04d850e.jpg")';
-}
-buttonResetPalette.addEventListener('click', PaletteResetClick);
-
-
 function onClick1 () {
   ChangeImage.src = "/images/Pets.pictures/1.png"
   backgroundSection.style.backgroundImage = 'url("https://i.pinimg.com/736x/c8/d5/09/c8d509ae55bbef2cc85a5245a04d850e.jpg")';
