@@ -1,62 +1,64 @@
-
 // sections > section1 + section2
 // select_seccion > , section2=  desing , fillout, share. 
 
 
-.sections  {  
+.sections {
     display: flex;
     flex-direction: column;
-        @media all and (min-width: 768px) { 
-            background-color: #f5f5f5;
-            padding: 30px;
-            width: 100%;
-            height: 90vh;
-            flex-direction: row-reverse;
-            justify-content: left;
-    }    @media all and (min-width: 1024px){ 
+
+    @media all and (min-width: 768px) {
+        background-color: #f5f5f5;
+        padding: 30px;
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: left;
+    }
+
+    @media all and (min-width: 1024px) {
         height: 80%;
     }
 }
 
 
 
-.card_section{  
+.card_section {
     padding: 5px 35px 50px 35px;
-    background-color: $color-secondary-grey;
+    background-image: url('https://i.pinimg.com/736x/c8/d5/09/c8d509ae55bbef2cc85a5245a04d850e.jpg');
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     border-radius: 6px;
-        @media all and (min-width: 768px) { 
-            height: 100%;
-            width: 100%;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
+
+    @media all and (min-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
     }
-    @media all and (min-width: 1024px){ 
+
+    @media all and (min-width: 1024px) {
         height: 100vh;
-}
+    }
 }
 
-.form {
-    @media all and (min-width: 768px) { 
-        height: 100%;
+form {
+    @media all and (min-width: 768px) {
         width: 60%;
         position: relative;
-}@media all and (min-width: 1024px){ 
-    height: 80%;
-}
+    }
+
+    @media all and (min-width: 1024px) {
+        height: 80%;
+    }
 }
 
 
 .select_section {
-        @media all and (min-width: 768px) { 
-            height: 100%;
-            width: 100%;
-            position: relative;
-} @media all and (min-width: 1024px){ 
-}
+    @media all and (min-width: 768px) {
+        height: 50%;
+        width: 100%;
+        position: relative;
+    }
 }

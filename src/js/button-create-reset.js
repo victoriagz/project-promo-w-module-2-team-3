@@ -17,10 +17,9 @@ const handleClickButtonCreate = (event) => {
 buttonCreate.addEventListener('click', handleClickButtonCreate);
 
 
-// Reset-button Preview
-
+// RESET BUTTON - resetCard
 const resetCard = () => {
-  console.log('The user has clicked the button');
+  console.log('Resetting card');
   document.getElementById('card__title__id').innerHTML = 'Nombre Apellido';
   document.getElementById('card__job__id').innerHTML = 'Front-end developer';
   document.getElementById('card__img__id').style.backgroundImage = 'url(https://i.pinimg.com/564x/da/f7/8c/daf78c186a9d4fa2bcfd1d84d9c956ca.jpg)';
@@ -30,8 +29,9 @@ const resetCard = () => {
   document.getElementById('social__github__id').href = '#';
 };
 
+// resetForm
 const resetForm = () => {
-  console.log('The user has clicked the button');
+  console.log('Resetting form');
   document.getElementById('name').value = '';
   document.getElementById('job').value = '';
   document.getElementById('image').style.backgroundImage = '';
@@ -41,14 +41,31 @@ const resetForm = () => {
   document.getElementById('github').value = '';
 };
 
-const handleResetClick = () => {
-resetCard(); 
-resetForm();
-handleChangeColor(palette1);
+// resetPalette
+const resetPalette = () => {
+  document.getElementById('colorScheme1').checked = true;
+};
+
+// resetProfileImage
+const resetPreviewImage = () => {
+  profilePreview.style.backgroundImage = 'none';
 }
 
-buttonReset.addEventListener('click', handleResetClick);
+// resetMainImage
+// const resetMainImage = () => {
+//   profileImage.style.backgroundImage.
+// }
+const handleResetButtonClick = () => {
+  resetCard();
+  resetForm()
+  resetPalette();
+  resetPreviewImage();
+  // resetMainImage();
+};
 
+buttonReset.addEventListener('click', handleResetButtonClick);
+
+// Social Media Links
 function updateContactLinks() {
   // Email
   const emailInput = document.querySelector('.js_email'); 
