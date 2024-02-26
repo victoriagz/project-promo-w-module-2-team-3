@@ -44,10 +44,10 @@ function changeFieldColor () {
 function handleArrowUpShare () {
   requiredMessage.innerHTML = ''; 
   console.log('0'); 
-  const emptyField = inputNameValue == '' || inputJobValue == '' || inputEmailValue == '' || inputPhoneValue == '';
+  //const emptyField = inputNameValue == '' || inputJobValue == '' || inputEmailValue == '' || inputPhoneValue == '';
   //const filledOutForm = inputNameValue && inputJobValue && inputEmailValue && inputPhoneValue;
   
-  if (emptyField) {
+  if (inputNameValue == '' || inputJobValue == '' || inputEmailValue == '' || inputPhoneValue == '') {
     console.log('1'); 
     requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
     changeFieldColor(); 
