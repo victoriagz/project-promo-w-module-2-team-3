@@ -50,23 +50,23 @@ const resetPreviewImage = () => {
 };
 
 //resetColorTittlePalette
-const resetColorTittlePalette = () => {
-  if (tittle2 || tittle3 || tittle4 || tittle5 || tittle6.style.color !== '#54585a') {
-    title1.style.color = '#438792';
-    title2.style.color = '#54585a';
-    title3.style.color = '#54585a';
-    title4.style.color = '#54585a';
-    title5.style.color = '#54585a';
-    title6.style.color = '#54585a';
-  }
-};
+// const resetColorTittlePalette = () => {
+//   if (tittle2 || tittle3 || tittle4 || tittle5 || tittle6.style.color !== '#54585a') {
+//     title1.style.color = '#438792';
+//     title2.style.color = '#54585a';
+//     title3.style.color = '#54585a';
+//     title4.style.color = '#54585a';
+//     title5.style.color = '#54585a';
+//     title6.style.color = '#54585a';
+//   }
+// };
 
 const handleResetButtonClick = () => {
   resetCard();
   resetForm();
   resetPalette();
   resetPreviewImage();
-  resetColorTittlePalette();
+  //resetColorTittlePalette();
   // resetMainImage();
   resetPreviewImage();
 };
