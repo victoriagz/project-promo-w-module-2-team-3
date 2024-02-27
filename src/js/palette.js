@@ -112,7 +112,14 @@ button4.addEventListener('click', () => onClick4());
 button5.addEventListener('click', () => onClick5());
 button6.addEventListener('click', () => onClick6());
 
-
+const buttonResetPalette = document.querySelector('.js-reset-palette');
+function PaletteResetClick() {
+  handleChangeColor(palette1); 
+  ChangeImage.src = "/images/Pets.pictures/1.png"
+  backgroundSection.style.backgroundImage = 'url("https://i.pinimg.com/736x/c8/d5/09/c8d509ae55bbef2cc85a5245a04d850e.jpg")';
+  document.getElementById('colorScheme1').checked = true;
+}
+buttonResetPalette.addEventListener('click', PaletteResetClick);
 
 
 
