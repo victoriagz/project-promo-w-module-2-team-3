@@ -82,9 +82,7 @@
   }
 }
 
-
-
-.color__palette{
+.color__palette {
   border: 1px solid black;
 }
 
@@ -96,6 +94,7 @@
   font-family: $font-main;
   size: 14px;
   font-weight: normal;
+  cursor: pointer;
 }
 
 .swatch1 {
@@ -134,7 +133,6 @@
   background-color: $color-light-grey-blue;
 }
 
-
 // ================PALETTE 4 PINK =================
 .swatch10 {
   background-color: #ffc8dd;
@@ -161,7 +159,6 @@
 .swatch15 {
   background-color: #44e5e7;
 }
-
 
 // ================PALETTE 6 PURPLE=================
 
