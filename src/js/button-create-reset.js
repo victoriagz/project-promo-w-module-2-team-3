@@ -40,9 +40,9 @@ const resetForm = () => {
 };
 
 // resetPalette
-const resetPalette = () => {
-  document.getElementById('colorScheme1').checked = true;
-};
+// const resetPalette = () => {
+//   document.getElementById('colorScheme1').checked = true;
+// };
 
 // resetProfileImage
 const resetPreviewImage = () => {
@@ -61,10 +61,6 @@ const resetColorTittlePalette = () => {
   }
 };
 
-// resetMainImage
-// const resetMainImage = () => {
-//   profileImage.style.backgroundImage.
-// }
 const handleResetButtonClick = () => {
   resetCard();
   resetForm();
@@ -72,6 +68,7 @@ const handleResetButtonClick = () => {
   resetPreviewImage();
   resetColorTittlePalette();
   // resetMainImage();
+  resetPreviewImage();
 };
 
 buttonReset.addEventListener('click', handleResetButtonClick);
