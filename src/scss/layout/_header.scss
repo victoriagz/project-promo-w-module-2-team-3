@@ -1,9 +1,16 @@
 .header {
-  height: 111px;
-  padding: 30px 80px 30px 40px;
-  background-image: url('https://www.manolosimon.com/wp-content/uploads/2020/08/marmoles-blancos.jpg');
+  height: 130px;
+  display: flex;
+  justify-content: center;
+
+  // background-image: url('https://www.manolosimon.com/wp-content/uploads/2020/08/marmoles-blancos.jpg');
+  @media (min-width: 768px) {
+    display: block;
+    padding: 0px 80px 40px 40px;
+  }
+
   figure {
-    width: 200px;
+    width: 250px;
     img {
       width: 100%;
     }
