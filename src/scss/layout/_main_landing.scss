@@ -15,11 +15,11 @@
   }
 
   figure {
-    padding-bottom: 30px;
-    width: 250px;
+    padding-bottom: 20px;
+    width: 300px;
 
     @media (min-width: 768px) {
-      width: 420px;
+      width: 450px;
     }
     @media (min-width: 1024px) {
       padding-bottom: 20px;
@@ -53,9 +53,9 @@
   }
 
   .main_landing__actions {
-    width: 320px;
-    margin: 30px auto 0 auto;
-    padding: 15px 20px 20px 15px;
+    width: 300px;
+    margin: 20px auto 0 auto;
+    padding: 15px;
     font-size: 14px;
     color: #54585a;
     border: 2px solid rgba(215, 115, 52, 0.2);
