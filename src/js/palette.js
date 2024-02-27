@@ -65,7 +65,7 @@ radiobutton5.addEventListener('click', () => handleChangeColor(palette5));
 radiobutton6.addEventListener('click', () => handleChangeColor(palette6));
 
 
-const ChangeImage = document.querySelector('.js-image');
+let ChangeImage = document.querySelector('.js-image');
 const button1 = document.querySelector('.js-button1');
 const button2 = document.querySelector('.js-button2');
 const button3 = document.querySelector('.js-button3');
@@ -124,3 +124,12 @@ buttonResetPalette.addEventListener('click', PaletteResetClick);
 
 
 
+
+const buttonAddImg = document.querySelector('.js-button_pic');
+
+let ResetImageClick = () => {
+  ChangeImage.src = "";
+}
+
+
+buttonAddImg.addEventListener('click', ResetImageClick);
