@@ -94,28 +94,52 @@ const requiredMessage = document.querySelector('.js-field-required-message');
 // Función para abrir el desplegable comparte
 function handleArrowUpShare () {
 
+  console.log('click arrow');
+
+  console.log('> requiredFields', requiredFields);
+
+   // que los campos required estén rellenos
+    // Función que compruebe que todos los campos están rellenos --> devuelve true o false después de iterar por todos los field required
+    // Si no están rellenos, muestro eso en el html y hago return
+
+    // Si el teléfono.... muestro mensaje y return
+    // Si el email ... muestro mensaje y return
+
+     // handleArrowUp
+
   for (const requiredField of requiredFields) {
     
     const emailField = requiredFields[2]; 
     const emailFieldValue = emailField.value; 
 
     const phoneField = requiredFields[3]; 
-    const phoneFieldValue = parseFloat(phoneField.value); //para convertir el string a number porque todos los valores del input vienen como strings 
+    const phoneFieldValue = parseInt(phoneField.value); //para convertir el string a number porque todos los valores del input vienen como strings 
+
+    requiredField.style.border = '1px solid #a2deaf';
+
+    console.log('Required field', requiredField.name);
+    console.log('Required field value', requiredField.value); 
+    console.log('Required field typeof value', typeof requiredField.value); 
+
+
 
     if (requiredField.value === '') {
       requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan'; 
       requiredField.style.border = '1px solid #ad6868';
+      console.log('1'); 
+      return;
     } else if (!emailFieldValue.includes('@')) {  
+      conso
       requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
       emailField.style.border = '1px solid #ad6868';
-    } else if (isNaN(phoneFieldValue)) {  
-      console.log('soy string'); 
+    } else if (isNaN(phoneFieldValue)) { 
+      // console.log('soy string'); 
       requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
       phoneField.style.border = '1px solid #ad6868';
     } else {
+      console.log('2');
       handleArrowUp (shareContainer, arrowUpShare);
-      console.log('hey');  
-      break;
+      // console.log('hey');  
     }
   }
 }
@@ -148,15 +172,15 @@ function handleArrowUpShare () {
  
 
   function handleArrowUp(container, arrow) {
-    console.log('0'); 
+    // console.log('0'); 
     closeOtherContainers(container);
-    console.log('1'); 
+    // console.log('1'); 
     toggleContainer(container); 
-    console.log('2');  
+    // console.log('2');  
     closeShareContainer(); 
-    console.log('3'); 
+    // console.log('3'); 
     arrow.classList.toggle('rotate-down'); // Agregamos o quitamos la clase rotate-down
-    console.log('4'); 
+    // console.log('4'); 
   }
 
  
