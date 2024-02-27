@@ -82,36 +82,48 @@ function onClick1() {
   ChangeImage.src = '/images/Pets.pictures/1.png';
   backgroundSection.style.backgroundImage =
     'url("https://i.pinimg.com/736x/c8/d5/09/c8d509ae55bbef2cc85a5245a04d850e.jpg")';
+  resetColorTittlePalette();
+  title1.style.color = '#a2deaf';
   console.log(1);
 }
 function onClick2() {
   ChangeImage.src = '/images/Pets.pictures/2.png';
   backgroundSection.style.backgroundImage =
     'url("https://i.pinimg.com/736x/fe/72/94/fe72948b42367756ae7ba55227d48506.jpg")';
+  resetColorTittlePalette();
+  title2.style.color = '#FF6347';
   console.log(2);
 }
 function onClick3() {
   ChangeImage.src = '/images/Pets.pictures/3.png';
   backgroundSection.style.backgroundImage =
     'url("https://www.gaulan.es/885327-large_default/veneto-marble-680935.jpg")';
+  resetColorTittlePalette();
+  title3.style.color = '#fe994a';
   console.log(3);
 }
 function onClick4() {
   ChangeImage.src = '/images/Pets.pictures/4.png';
   backgroundSection.style.backgroundImage =
     'url("https://media.istockphoto.com/id/1459266752/es/foto/fondo-de-textura-de-m%C3%A1rmol-rosa-con-alta-resoluci%C3%B3n-en-patr%C3%B3n-sin-costuras-para-el-dise%C3%B1o-de.webp?b=1&s=170667a&w=0&k=20&c=Vv_-7xnMB2kcO5WwqxNihCUd3b0q7T2cuvS08gp1LnY=")';
+  resetColorTittlePalette();
+  title4.style.color = '#ffafcc';
   console.log(4);
 }
 function onClick5() {
   ChangeImage.src = '/images/Pets.pictures/5.png';
   backgroundSection.style.backgroundImage =
     'url("https://dbdzm869oupei.cloudfront.net/img/vinylrugs/preview/55714.png")';
+  resetColorTittlePalette();
+  title5.style.color = '#44e5e7';
   console.log(5);
 }
 function onClick6() {
   ChangeImage.src = '/images/Pets.pictures/6.png';
   backgroundSection.style.backgroundImage =
     'url("https://dbdzm869oupei.cloudfront.net/img/sticker/preview/38357.png")';
+  resetColorTittlePalette();
+  title6.style.color = '#620097';
   console.log(6);
 }
 
