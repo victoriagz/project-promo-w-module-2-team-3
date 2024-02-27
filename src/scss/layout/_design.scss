@@ -82,9 +82,7 @@
   }
 }
 
-
-
-.color__palette{
+.color__palette {
   border: 1px solid black;
 }
 
@@ -96,6 +94,25 @@
   font-family: $font-main;
   size: 14px;
   font-weight: normal;
+  cursor: pointer;
+}
+.js-container-title-1:hover {
+  color: #a2deaf;
+}
+.js-container-title-2:hover {
+  color: #ff6347;
+}
+.js-container-title-3:hover {
+  color: #fe994a;
+}
+.js-container-title-4:hover {
+  color: #ffafcc;
+}
+.js-container-title-5:hover {
+  color: #59d2fe;
+}
+.js-container-title-6:hover {
+  color: #620097;
 }
 
 .swatch1 {
@@ -134,7 +151,6 @@
   background-color: $color-light-grey-blue;
 }
 
-
 // ================PALETTE 4 PINK =================
 .swatch10 {
   background-color: #ffc8dd;
@@ -161,7 +177,6 @@
 .swatch15 {
   background-color: #44e5e7;
 }
-
 
 // ================PALETTE 6 PURPLE=================
 
