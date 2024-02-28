@@ -15,18 +15,16 @@
 
     
     <title>Edit Cards</title>
-    <link rel="stylesheet" href="./assets/main-de481df3.css">
+    <link rel="stylesheet" href="./assets/main-df1c3288.css">
   </head>
 
   <body>
     <header class="header">
   <figure>
     <a href="/index.html"
-      ><img src="./images/logo-awesome-profile-cards.svg" alt="logo-awesome-profile-cards"
+      ><img src="./images/logo-Scripters-transparent.png" alt="logo-awesome-profile-cards"
     /></a>
-  </div>
   </figure>
-
 </header>
 
     <main class="sections">
@@ -90,7 +88,7 @@
     <fieldset class="form__box">
   <legend class="form__heading">
     <i class="far fa-object-ungroup" aria-hidden="true"></i>
-    <h2 class="title">DISEÑA</h2>
+    <h2 class="title js-text-design">DISEÑA</h2>
     <i class="fa-solid fa-paw js-arrow-up-design" aria-hidden="true"></i>
   </legend>
   <div class="color__container js-color-container collapsed">
@@ -106,7 +104,7 @@
       />
       <label class="color__option" for="colorScheme1">
         <div class="color__palette palette1">
-          <p class="color__container--title">Green</p>
+          <p class="color__container--title js-title-grey js-container-title-1">Green Field</p>
           <div class="color__swatch swatch1"></div>
           <div class="color__swatch swatch2"></div>
           <div class="color__swatch swatch3"></div>
@@ -123,7 +121,7 @@
         name="colorScheme"
       />
       <label class="color__option" for="colorScheme2">
-        <p class="color__container--title">Red</p>
+        <p class="color__container--title js-title-grey js-container-title-2">Passion Red</p>
         <div class="color__palette palette2">
           <div class="color__swatch swatch4"></div>
           <div class="color__swatch swatch5"></div>
@@ -141,16 +139,14 @@
         name="colorScheme"
       />
       <label class="color__option" for="colorScheme3">
-        <p class="color__container--title">Orange</p>
+        <p class="color__container--title js-title-grey js-container-title-3">Stone Beach</p>
         <div class="color__palette palette3">
           <div class="color__swatch swatch7"></div>
           <div class="color__swatch swatch8"></div>
           <div class="color__swatch swatch9"></div>
-
         </div>
       </label>
     </div>
-
 
     <!-- =====================NEW COLORS======================== -->
     <div class="color__container--group">
@@ -162,99 +158,159 @@
         name="colorScheme"
       />
       <label class="color__option" for="colorScheme4">
-        <p class="color__container--title">Pink</p>
+        <p class="color__container--title js-title-grey js-container-title-4">Sweet Pink</p>
         <div class="color__palette palette4">
           <div class="color__swatch swatch10"></div>
           <div class="color__swatch swatch11"></div>
           <div class="color__swatch swatch12"></div>
         </div>
-      </div>
+      </label>
+    </div>
 
-      <div class="color__container--group">
-        <input
-          class="color__input js-radio5 js-button5"
-          id="colorScheme5"
-          type="radio"
-          value="4"
-          name="colorScheme"
-        />
-        <label class="color__option" for="colorScheme5">
-          <p class="color__container--title">Blue</p>
-          <div class="color__palette palette5">
-            <div class="color__swatch swatch13"></div>
-            <div class="color__swatch swatch14"></div>
-            <div class="color__swatch swatch15"></div>
-          </div>
+    <div class="color__container--group">
+      <input
+        class="color__input js-radio5 js-button5"
+        id="colorScheme5"
+        type="radio"
+        value="4"
+        name="colorScheme"
+      />
+      <label class="color__option" for="colorScheme5">
+        <p class="color__container--title js-title-grey js-container-title-5">Caribbean Blue</p>
+        <div class="color__palette palette5">
+          <div class="color__swatch swatch13"></div>
+          <div class="color__swatch swatch14"></div>
+          <div class="color__swatch swatch15"></div>
         </div>
+      </label>
+    </div>
 
-        <div class="color__container--group">
-          <input
-            class="color__input js-radio6 js-button6"
-            id="colorScheme6"
-            type="radio"
-            value="6"
-            name="colorScheme"
-          />
-          <label class="color__option" for="colorScheme6">
-            <p class="color__container--title">AstroPurple</p>
-            <div class="color__palette palette6">
-              <div class="color__swatch swatch16"></div>
-              <div class="color__swatch swatch17"></div>
-              <div class="color__swatch swatch18"></div>
-            </div>
-          </div>
-          <!-- =====================END NEW COLORS======================== -->
+    <div class="color__container--group">
+      <input
+        class="color__input js-radio6 js-button6"
+        id="colorScheme6"
+        type="radio"
+        value="6"
+        name="colorScheme"
+      />
+      <label class="color__option" for="colorScheme6">
+        <p class="color__container--title js-title-grey js-container-title-6">Astro Purple</p>
+        <div class="color__palette palette6">
+          <div class="color__swatch swatch16"></div>
+          <div class="color__swatch swatch17"></div>
+          <div class="color__swatch swatch18"></div>
+        </div>
+      </label>
+    </div>
+    <!-- =====================END NEW COLORS======================== -->
   </div>
 </fieldset>
 
     <div class="share_section__top_line"></div>
 <fieldset class="form__box_form">
-
   <legend class="form__heading_form">
     <i class="fa-regular fa-keyboard" aria-hidden="true"></i>
-    <h2 class="title_form">RELLENA</h2>
+
+    <h2 class="title_form js-text-form">RELLENA</h2>
     <i class="fa-solid fa-paw js-arrow-up-form" aria-hidden="true"></i>
+
+  
   </legend>
  
   <div class="form__design__input js-form collapsed">
     <!-- Complete name -->
-    <label class="form__label" for="name">Nombre completo</label>
-    <input type="text" id="name" name="name" class="js_name" placeholder="Ej: Sally Hill" required/>
+
+    <label class="form__label" for="name">Nombre completo<span class="asterisk">*</span></label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      class="js-name"
+      placeholder="Ej: Sally Hill"
+      required
+      pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s'-]+$"
+      title="Ingrese un nombre y apellidos válidos."
+    />
 
     <!-- Job position -->
-    <label class="form__label" for="job">Puesto</label>
-    <input type="text" id="job" name="job" class="js_job_position" placeholder="Ej: Front-end unicorn" required/>
+    <label class="form__label" for="job">Puesto<span class="asterisk">*</span></label>
+    <input
+      type="text"
+      id="job"
+      name="job"
+      class="js-job"
+      placeholder="Ej: Front-end unicorn"
+      required
+      pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s'-]+$"
+      title="Ingrese una profesión válida."
+    />
+
 
     <!-- IMAGEN -->
-    <label class="form__label form__photolabel" for="image">Imagen de perfil</label>
+    <label class="form__label" for="image">Imagen de perfil</label>
     <div class="action">
-      <label class="action__upload-btn" for="image">Añadir imagen</label>
-      <input type="file" name="" id="image" style="display: none" class="collapsed js__profile-upload-btn" required />
+      <label class="js-button_pic action__upload-btn slide_down" for="image">Añadir imagen</label>
+      <input
+        type="file"
+        name="image"
+        id="image"
+        style="display: none"
+        class="collapsed js__profile-upload-btn"
+        accept="image/*"
+        required
+        title="Ingrese un formato de imagen válido."
+      />
+      <!-- con accept="image/*", sólo se previsualizará cuando el archivo sea formato de imagen -->
+     
+
       <div class="profile__preview js__profile-preview"></div>
     </div>
 
-
-
     <!-- Email -->
-    <label class="form__label" for="email">Email</label>
-    <input type="email" id="email" name="email" class="js_email" placeholder="sally-hill@gmail.com" required />
+
+    <label class="form__label" for="email">Email<span class="asterisk">*</span></label>
+    <input type="email" id="email" name="email" class="js_email" placeholder="sally-hill@gmail.com" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+      title="Ingrese un formato válido."/>
 
     <!-- Phone Number -->
-    <label class="form__label" for="phone">Teléfono</label>
-    <input type="tel" id="phone" name="phone" class="js_phone" placeholder="Ej: 555-55-55-55" required/>
+    <label class="form__label" for="phone">Teléfono<span class="asterisk">*</span></label>
+    <input type="tel" id="phone" name="phone" class="js_phone" placeholder="Ej: 555-55-55-55" required pattern="^\+?\d+(\.\d+)?$"
+      title="Ingrese un número válido en formato español o internacional."/>
 
     <!-- Linkedin -->
     <label class="form__label" for="linkedin">Linkedin</label>
-    <input type="text" id="linkedin" name="linkedin" class="js_linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required />
+    <input
+      type="text"
+      id="linkedin"
+      name="linkedin"
+      class="js_linkedin"
+      placeholder="Ej: linkedin.com/in/sally.hill"
+      required
+      pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+      title="Ingrese un formato válido."
+    />
 
     <!-- Github -->
     <label class="form__label" for="github">Github</label>
-    <input type="text" id="github" name="github" class="js_github" placeholder="Ej: @sally-hill" required />
+    <input
+      type="text"
+      id="github"
+      name="github"
+      class="js_github"
+      placeholder="Ej: @sally-hill"
+      required
+      pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+      title="Ingrese un formato válido."
+    />
+   
+    <!-- Message: required to fill out field -->
+    <p class="form__label js-field-required-message"></span></p>
 
     <input type="submit" id="hiddenSubmit" style="display: none;" />
  
   </div>
 </fieldset>
+
     <fieldset class="share_section">
   <!-- linea de arriba -->
   <div class="share_section__top_line"></div>
@@ -266,28 +322,24 @@
       <i class="fa-solid fa-share-nodes share_icon"></i>
 
       <!-- comparte message -->
-      <h2 class="share_message">COMPARTE</h2>
+      <h2 class="share_message js-text-share">COMPARTE</h2>
     </div>
 
     <!-- arrow up icon -->
-    <i class="fa-solid fa-paw angle_up_icon js-arrow-up-share "></i>
+
+    <i class="fa-solid fa-paw angle_up_icon js-arrow-up-share"></i>
   </div>
 
-
-   
-
-
   <!-- Crear tarjeta / input submit CAMBIAR -->
-  <div class="share_section__create_card collapsed  js-share">
+  <div class="share_section__create_card collapsed js-share">
     <button class="js_button_create_card" type="submit">
-        <i class="fa-regular fa-address-card"></i>
-        <p>CREAR TARJETA</p>
+      <i class="fa-regular fa-address-card"></i>
+      <p>CREAR TARJETA</p>
     </button>
   </div>
 
   <!-- Línea abajo -->
   <div class="share_section__bottom_line0"></div>
-
 
   <!-- Línea abajo -->
   <div class="share_section__bottom_line"></div>
@@ -305,10 +357,9 @@
       <i class="fa-brands fa-twitter"></i>
 
       <a href="https://twitter.com" target="_blank" class="twitter_text">Compartir en twitter</a>
-        <!-- arrow up icon -->
+      <!-- arrow up icon -->
     </div>
 
-  
     <!-- Línea abajo -->
     <div class="bottom_line2"></div>
 
