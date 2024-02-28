@@ -64,7 +64,7 @@ const handleResetButtonClick = () => {
   resetForm();
   resetPalette();
   resetPreviewImage();
-  //resetColorTittlePalette();
+  resetColorTittlePalette();
   // resetMainImage();
   resetPreviewImage();
 };
