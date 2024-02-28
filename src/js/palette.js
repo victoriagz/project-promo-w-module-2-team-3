@@ -124,6 +124,7 @@ button6.addEventListener('click', () => onClick6());
 
 const buttonResetPalette = document.querySelector('.js-reset-palette');
 function PaletteResetClick() {
+  resetPreviewImage();
   handleChangeColor(palette1);
   ChangeImage.src = '/images/Pets.pictures/1.png';
   backgroundSection.style.backgroundImage =

@@ -19,8 +19,7 @@ const resetCard = () => {
   console.log('Resetting card');
   document.getElementById('card__title__id').innerHTML = 'Nombre Apellido';
   document.getElementById('card__job__id').innerHTML = 'Front-end developer';
-  document.getElementById('card__img__id').style.backgroundImage =
-    'url(https://i.pinimg.com/564x/da/f7/8c/daf78c186a9d4fa2bcfd1d84d9c956ca.jpg)';
+  // document.getElementById('card__img__id').style.backgroundImage = '/images/Pets.pictures/1.png';
   document.getElementById('social__email__id').href = '#';
   document.getElementById('social__mobile__id').href = 'tel:#';
   document.getElementById('social__linkedin__id').href = '#';
@@ -38,11 +37,6 @@ const resetForm = () => {
   document.getElementById('linkedin').value = '';
   document.getElementById('github').value = '';
 };
-
-// resetPalette
-// const resetPalette = () => {
-//   document.getElementById('colorScheme1').checked = true;
-// };
 
 // resetProfileImage
 const resetPreviewImage = () => {
@@ -64,11 +58,9 @@ const resetPreviewImage = () => {
 const handleResetButtonClick = () => {
   resetCard();
   resetForm();
-  resetPalette();
-  resetPreviewImage();
+  // resetPreviewImage();
   //resetColorTittlePalette();
   // resetMainImage();
-  resetPreviewImage();
 };
 
 buttonReset.addEventListener('click', handleResetButtonClick);
