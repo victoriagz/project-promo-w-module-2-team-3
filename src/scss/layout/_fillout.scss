@@ -23,7 +23,7 @@
   padding-right: 20px;
   position: absolute;
   right: 0;
-  cursor: pointer;
+  cursor: url('/images/paw2.png') 10 10, auto;
 }
 
 .title_form {
@@ -33,7 +33,7 @@
   font-weight: 600;
 }
 .title_form:hover {
-  cursor: pointer;
+  cursor: url('/images/paw2.png') 10 10, auto;
   transform: scale(1.05);
   transition: 0.5s ease;
 }
