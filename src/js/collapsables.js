@@ -2,7 +2,10 @@
 //Arrows
 const arrowUpDesign = document.querySelector('.js-arrow-up-design');
 const arrowUpForm = document.querySelector('.js-arrow-up-form');
-const clickShare = document.querySelector('.js-arrow-up-share');
+const arrowUpShare = document.querySelector('.js-arrow-up-share');
+const textDesign = document.querySelector(".js-text-design");
+const textForm = document.querySelector(".js-text-form");
+const textShare = document.querySelector(".js-text-share")
 
 //Containers
 const designContainer = document.querySelector('.js-color-container');
@@ -12,14 +15,19 @@ const dropDownSection = document.querySelector('.js_drop_down');
 //const dropDownSectionCollapsed = dropDownSection.classList.add('collapsed');
 
 //Form fields
-const inputName = document.querySelector('.js_name');
-const inputJob = document.querySelector('.js_job');
-const requiredFields = document.querySelectorAll('.js-required'); //es un array
-const requiredMessage = document.querySelector('.js-field-required-message');
+const inputName = document.querySelector(".js-name");
+const inputJob = document.querySelector(".js-job");
+const inputEmail = document.querySelector(".js-email");
+const inputPhone = document.querySelector(".js-phone");
+const inputLinkedin = document.querySelector(".js-linkedin"); 
+const inputGithub = document.querySelector(".js-github"); 
+const requiredMessage = document.querySelector(".js-field-required-message");
+const titlePreview = document.querySelector(".js_preview_title"); //variable del preview del nombre
+const jobPreview = document.querySelector(".js_preview_job");
 
 
-const nameField = requiredFields[0];
-const nameFieldValue = nameField.value;
+// const nameField = requiredFields[0];
+// const nameFieldValue = nameField.value;
 
 
 function handleCollapseShare () {
@@ -55,7 +63,7 @@ function handleCollapseShare () {
           requiredField.style.border = '';
           requiredField.style.border = '1px solid #a2deaf';
           requiredMessage.innerHTML = 'Todos los campos están rellenos, buen trabajo!';
-          handleCollapse (shareContainer, clickShare);
+          handleCollapse (shareContainer, arrowUpShare);
           return;
         } 
     }
@@ -78,27 +86,39 @@ function handleCollapseShare () {
   }
 
 
-  function toggleContainer(container) {
-    container.classList.toggle('collapsed');
-  }
+  // function toggleContainer(container) {
+  //   container.classList.toggle('collapsed');
+  // }
 
-  function closeShareContainer (){
-    if (shareContainer.classList.contains('collapsed')){
-      if(!dropDownSection.classList.contains('collapsed')){
-        dropDownSection.classList.add('collapsed');
-      }
-    }
-  }
+  // function closeShareContainer (){
+  //   if (shareContainer.classList.contains('collapsed')){
+  //     if(!dropDownSection.classList.contains('collapsed')){
+  //       dropDownSection.classList.add('collapsed');
+  //     }
+  //   }
+  // }
 
 
-  function handleCollapse(container, arrow) {
+  // function handleCollapse(container, arrow) {
+  //   closeOtherContainers(container);
+  //   toggleContainer(container);
+  //   closeShareContainer();
+  //   arrow.classList.toggle('rotate-down');
+  // }
+
+  function handleCollapse(container) {
     closeOtherContainers(container);
-    toggleContainer(container);
-    closeShareContainer();
-    arrow.classList.toggle('rotate-down');
+    container.classList.toggle("collapsed");
   }
 
+  // arrowUpDesign.addEventListener('click', () => handleCollapse(designContainer, arrowUpDesign));
+  // arrowUpForm.addEventListener('click', () => handleCollapse(formContainer, arrowUpForm));
+  // arrowUpShare.addEventListener('click', () => handleCollapseShare());
 
-  arrowUpDesign.addEventListener('click', () => handleCollapse(designContainer, arrowUpDesign));
-  arrowUpForm.addEventListener('click', () => handleCollapse(formContainer, arrowUpForm));
-  clickShare.addEventListener('click', () => handleCollapseShare());
+  
+  textDesign.addEventListener("click", () => handleCollapse(designContainer, textDesign));
+  textForm.addEventListener("click", () => handleCollapse(formContainer, textForm));
+  textShare.addEventListener("click", () => handleCollapse(shareContainer, textShare));
+  arrowUpDesign.addEventListener("click", () => handleCollapse(designContainer, arrowUpDesign));
+  arrowUpForm.addEventListener("click", () => handleCollapse(formContainer, arrowUpForm));
+  arrowUpShare.addEventListener('click', () => handleCollapseShare());
