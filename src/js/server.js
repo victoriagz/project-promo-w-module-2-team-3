@@ -1,16 +1,15 @@
 
-// const inputName 
-// const inputJob 
-// const inputEmail 
-// const inputPhone 
-// const inputLinkedin  
-// const inputGithub 
 
-// const data = {
-//     palette: '', 
-//     inputName.value: '',
-
-// }
+const data = { 
+    palette: 1,
+    name: inputName.value,
+    job: inputJob.value, 
+    email: inputEmail.value, 
+    phone: inputPhone.value, 
+    linkedin: inputLinkedin.value, 
+    github: inputGithub.value,
+    photo: ''
+}
 
 
 const handleShare = (event) => {
@@ -23,6 +22,7 @@ const handleShare = (event) => {
     })  .then((response) => response.json())
         .then((data) => {
             if(data.success){
+                handleClickButtonCreate(); 
                 //pintar la url (data.cardURL)
             } else {
                 //pintar en el html que ha habido un error
