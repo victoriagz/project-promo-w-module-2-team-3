@@ -1,16 +1,16 @@
 
-const inputName 
-const inputJob 
-const inputEmail 
-const inputPhone 
-const inputLinkedin  
-const inputGithub 
+// const inputName 
+// const inputJob 
+// const inputEmail 
+// const inputPhone 
+// const inputLinkedin  
+// const inputGithub 
 
-const data = {
-    palette: '', 
-    inputName.value: '',
+// const data = {
+//     palette: '', 
+//     inputName.value: '',
 
-}
+// }
 
 
 const handleShare = (event) => {
