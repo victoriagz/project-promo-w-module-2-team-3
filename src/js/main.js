@@ -1,8 +1,9 @@
 'use strict';
 
-import './arrows.js';
+import './collapsables.js';
 import './palette.js';
 import './autofill-card.js';
 import './get-avatar.js';
-import './button-create-reset.js';
+import './social-media.js';
+import './reset.js'
 import './server.js';

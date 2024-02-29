@@ -12,7 +12,9 @@ const designContainer = document.querySelector('.js-color-container');
 const formContainer = document.querySelector('.js-form');
 const shareContainer = document.querySelector('.js-share');
 const dropDownSection = document.querySelector('.js_drop_down');
-//const dropDownSectionCollapsed = dropDownSection.classList.add('collapsed');
+
+//Create button
+const buttonCreate = document.querySelector('.js_button_create_card');
 
 //Form fields
 const inputName = document.querySelector(".js-name");
@@ -84,30 +86,24 @@ function handleCollapseShare () {
   }
 
 
-  // function toggleContainer(container) {
-  //   container.classList.toggle('collapsed');
-  // }
-
-  // function closeShareContainer (){
-  //   if (shareContainer.classList.contains('collapsed')){
-  //     if(!dropDownSection.classList.contains('collapsed')){
-  //       dropDownSection.classList.add('collapsed');
-  //     }
-  //   }
-  // }
-
-
-  // function handleCollapse(container, arrow) {
-  //   closeOtherContainers(container);
-  //   toggleContainer(container);
-  //   closeShareContainer();
-  //   arrow.classList.toggle('rotate-down');
-  // }
-
   function handleCollapse(container) {
     closeOtherContainers(container);
     container.classList.toggle("collapsed");
   }
+
+// Collapsable create button 
+const handleClickButtonCreate = (event) => {
+  const dropDown = document.querySelector('.js_drop_down');
+  event.preventDefault();
+  if (dropDown.classList.contains('collapsed')) {
+    dropDown.classList.remove('collapsed');
+    buttonCreate.style.backgroundColor = '#d5d5d5';
+    buttonCreate.style.pointerEvents = 'none';
+  }
+};
+
+buttonCreate.addEventListener('click', handleClickButtonCreate);
+//buttonCreate.addEventListener('click', handleShare); 
 
   textDesign.addEventListener("click", () => handleCollapse(designContainer, textDesign));
   textForm.addEventListener("click", () => handleCollapse(formContainer, textForm));
