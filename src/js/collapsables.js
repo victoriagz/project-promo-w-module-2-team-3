@@ -107,7 +107,7 @@ buttonCreate.addEventListener('click', handleClickButtonCreate);
 
   textDesign.addEventListener("click", () => handleCollapse(designContainer, textDesign));
   textForm.addEventListener("click", () => handleCollapse(formContainer, textForm));
-  textShare.addEventListener("click", () => handleCollapse(shareContainer, textShare));
+  textShare.addEventListener("click", () => handleCollapseShare());
   arrowUpDesign.addEventListener("click", () => handleCollapse(designContainer, arrowUpDesign));
   arrowUpForm.addEventListener("click", () => handleCollapse(formContainer, arrowUpForm));
   arrowUpShare.addEventListener('click', () => handleCollapseShare());
