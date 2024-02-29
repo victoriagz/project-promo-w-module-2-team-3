@@ -17,7 +17,7 @@
       type="text"
       id="name"
       name="name"
-      class="js-name"
+      class="js-name js-required"
       placeholder="Ej: Sally Hill"
       required
       pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s'-]+$"
@@ -30,7 +30,7 @@
       type="text"
       id="job"
       name="job"
-      class="js-job"
+      class="js-job js-required"
       placeholder="Ej: Front-end unicorn"
       required
       pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s'-]+$"
@@ -61,12 +61,12 @@
     <!-- Email -->
 
     <label class="form__label" for="email">Email<span class="asterisk">*</span></label>
-    <input type="email" id="email" name="email" class="js_email" placeholder="sally-hill@gmail.com" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+    <input type="email" id="email" name="email" class="js_email js-required" placeholder="sally-hill@gmail.com" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
       title="Ingrese un formato válido."/>
 
     <!-- Phone Number -->
     <label class="form__label" for="phone">Teléfono<span class="asterisk">*</span></label>
-    <input type="tel" id="phone" name="phone" class="js_phone" placeholder="Ej: 555-55-55-55" required pattern="^\+?\d+(\.\d+)?$"
+    <input type="tel" id="phone" name="phone" class="js_phone js-required" placeholder="Ej: 555-55-55-55" required pattern="^\+?\d+(\.\d+)?$"
       title="Ingrese un número válido en formato español o internacional."/>
 
     <!-- Linkedin -->
