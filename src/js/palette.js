@@ -109,7 +109,7 @@ function onClick5() {
   console.log(5);
 }
 function onClick6() {
-  ChangeImage.src = '/images/6.png';
+  ChangeImage.src = '/public/images/6.png';
   backgroundSection.style.backgroundImage =
     'url("https://dbdzm869oupei.cloudfront.net/img/sticker/preview/38357.png")';
   console.log(6);
