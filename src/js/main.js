@@ -1,6 +1,6 @@
 'use strict';
 
-import './arrows.js';
+import './collapsables.js';
 import './palette.js';
 import './autofill-card.js';
 import './get-avatar.js';
