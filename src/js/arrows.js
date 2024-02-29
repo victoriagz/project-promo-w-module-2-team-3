@@ -1,5 +1,5 @@
 
-//Arrows
+//Arrows & texts
 const arrowUpDesign = document.querySelector('.js-arrow-up-design');
 const arrowUpForm = document.querySelector('.js-arrow-up-form');
 const arrowUpShare = document.querySelector('.js-arrow-up-share');
@@ -23,9 +23,6 @@ const inputLinkedin = document.querySelector(".js-linkedin");
 const inputGithub = document.querySelector(".js-github"); 
 const requiredFields = document.querySelectorAll(".js-required"); 
 const requiredMessage = document.querySelector(".js-field-required-message");
-//const titlePreview = document.querySelector(".js_preview_title"); 
-//const jobPreview = document.querySelector(".js_preview_job");
-
 
 // const nameField = requiredFields[0];
 // const nameFieldValue = nameField.value;
