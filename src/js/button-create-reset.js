@@ -12,7 +12,8 @@ const handleClickButtonCreate = (event) => {
   }
 };
 
-buttonCreate.addEventListener('click', handleClickButtonCreate);
+//buttonCreate.addEventListener('click', handleClickButtonCreate);
+buttonCreate.addEventListener('click', handleShare); 
 
 // RESET BUTTON - resetCard
 const resetCard = () => {

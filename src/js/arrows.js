@@ -17,6 +17,8 @@
   const inputJob = document.querySelector(".js-job");
   const inputEmail = document.querySelector(".js-email");
   const inputPhone = document.querySelector(".js-phone");
+  const inputLinkedin = document.querySelector(".js-linkedin"); 
+  const inputGithub = document.querySelector(".js-github"); 
   const requiredMessage = document.querySelector(".js-field-required-message");
   const titlePreview = document.querySelector(".js_preview_title"); //variable del preview del nombre
   const jobPreview = document.querySelector(".js_preview_job");
