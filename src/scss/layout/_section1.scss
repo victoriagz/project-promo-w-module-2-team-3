@@ -9,7 +9,7 @@
   background-color: transparent;
   border: 1px solid white;
   color: #54585a;
-  cursor: pointer;
+  cursor: url('/images/paw2.png') 10 10, auto;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -64,10 +64,12 @@
 }
 
 .rrss ul li a i {
+  cursor: url('/images/paw2.png') 10 10, auto;
   color: $color-secondary-dark;
 }
 
 .rrss ul li {
+  cursor: url('/images/paw2.png') 10 10, auto;
   display: flex;
   align-items: center;
   justify-content: center;
