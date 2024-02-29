@@ -38,6 +38,12 @@
   cursor: url('/images/paw2.png') 10 10, auto;
 }
 
+.fa-paw:hover {
+  color: rgb(172, 100, 147);
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
+
 .title {
   color: #4a4e69;
   font-family: $font-main;
