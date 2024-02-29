@@ -12,13 +12,10 @@ const dropDownSection = document.querySelector('.js_drop_down');
 //const dropDownSectionCollapsed = dropDownSection.classList.add('collapsed');
 
 //Form fields
- const inputName = document.querySelector('.js_name');
- const inputJob = document.querySelector('.js_job');
-// const inputEmail = document.querySelector('.js_email');
-// const inputPhone = document.querySelector('.js_phone');
+const inputName = document.querySelector('.js_name');
+const inputJob = document.querySelector('.js_job');
 const requiredFields = document.querySelectorAll('.js-required'); //es un array
 const requiredMessage = document.querySelector('.js-field-required-message');
-//const requiredFields = form.querySelectorAll('[required]'); //variable que recoge todos los elementos con la clase required
 
 /* ANA 
 // que los campos required estén rellenos
@@ -33,28 +30,39 @@ const requiredMessage = document.querySelector('.js-field-required-message');
 */
 
 // Función que compruebe que todos los campos están rellenos --> devuelve true o false después de iterar por todos los field required
-let i = 0; 
-let result = ''; 
+let result = false; 
 
 function emptyField () { 
+  //let i = 0; 
 
   for (const requiredField of requiredFields) {
+
     //if field empty
     if(requiredField.value === '') {
-      i += 1; 
-      console.log(i); 
+      //i ++; 
+      //console.log(i); 
       result = true;
       requiredField.style.border = '1px solid #ad6868';
-      console.log(result); 
+      console.log('campo SIN rellenar'); 
+
+      // for (const requiredField of requiredFields) {
+      //   if (result === true) {
+      //   requiredField.style.border = '1px solid #ad6868';
+      //   console.log('campo SIN rellenar'); 
+      //   } else {
+      //     requiredField.style.border = '';
+      //     requiredField.style.border = '1px solid #a2deaf';
+      //   }
+      // }
+      return;
+
     //if field not empty 
     } else {
-      i = 0; 
-      console.log(i); 
+      //console.log(i); 
       console.log('campo relleno'); 
       result = false;
       requiredField.style.border = '';
       requiredField.style.border = '1px solid #a2deaf';
-      //console.log(result); 
     }
   }
 
@@ -64,31 +72,33 @@ function emptyField () {
 function handleCollapseShare () {
   emptyField(); 
 
-  const nameField = requiredFields[0];
-  const nameFieldValue = nameField.value; 
-  const jobField = requiredFields[1];
-  const jobFieldValue = jobField.value; 
-  const emailField = requiredFields[2]; 
-  const emailFieldValue = emailField.value; 
+  // const nameField = requiredFields[0];
+  // const nameFieldValue = nameField.value; 
+  // const jobField = requiredFields[1];
+  // const jobFieldValue = jobField.value; 
+  const emailField = requiredFields[2].value; 
+  const emailFieldValue = emailField; 
   const phoneField = requiredFields[3]; 
   const phoneFieldValue = parseInt(phoneField.value);
 
 
-  if (nameFieldValue && jobFieldValue && emailField && phoneFieldValue) {
-    console.log('todos los campos rellenos'); 
-    requiredMessage.innerHTML = 'Todos los campos están rellenos, buen trabajo!'; 
-    handleCollapse (shareContainer, clickShare);
-  } else if (result === true) {
+  if (result === true) {
     requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*'; 
     //requiredField.style.border = '1px solid #ad6868';
-  } else if (!emailFieldValue.includes('@')) {  
-      requiredMessage.innerHTML = 'Por favor, introduce un email válido'; 
-      emailField.style.border = '1px solid #ad6868';
-  } else if (isNaN(phoneFieldValue)) { 
-      requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido'; 
-      phoneField.style.border = '1px solid #ad6868';
-  }  
-}
+  } else {
+      if (!emailFieldValue.includes('@')) {  
+        requiredMessage.innerHTML = 'Por favor, introduce un email válido*'; 
+        emailField.style.border = '1px solid #ad6868';
+      } else if (isNaN(phoneFieldValue)) { 
+        requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido*'; 
+        phoneField.style.border = '1px solid #ad6868';
+      }  else {
+        console.log('todos los campos rellenos'); 
+        requiredMessage.innerHTML = 'Todos los campos están rellenos, buen trabajo!'; 
+        handleCollapse (shareContainer, clickShare);
+      }
+    }
+  }
 
 // Función para abrir el desplegable comparte
 // function handleArrowUpShare () {
