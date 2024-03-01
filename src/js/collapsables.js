@@ -51,7 +51,7 @@ function handleCollapseShare () {
     } else {
       requiredField.style.border = '1px solid #a2deaf';
         if (jobFieldValue === '') {
-          requiredMessage.innerHTML = 'Por favor, rellena TU TRABAJO*';
+          requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
           jobField.style.border = '1px solid #ad6868';
         } else if (!emailFieldValue.includes('@')) {
           requiredMessage.innerHTML = 'Por favor, introduce un email válido*';
@@ -65,7 +65,6 @@ function handleCollapseShare () {
           console.log('todos los campos rellenos');
           requiredField.style.border = '';
           requiredField.style.border = '1px solid #a2deaf';
-          requiredMessage.innerHTML = 'Todos los campos están rellenos, buen trabajo!';
           handleCollapse (shareContainer, arrowUpShare);
           return;
         } 
