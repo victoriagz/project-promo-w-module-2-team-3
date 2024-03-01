@@ -126,7 +126,7 @@ const buttonResetPalette = document.querySelector('.js-reset-palette');
 function PaletteResetClick() {
   resetPreviewImage();
   handleChangeColor(palette1);
-  ChangeImage.src = '/images/dog-doctor.png';
+  ChangeImage.src = './images/dog-doctor.png';
   backgroundSection.style.backgroundImage =
     'url("https://i.pinimg.com/736x/c8/d5/09/c8d509ae55bbef2cc85a5245a04d850e.jpg")';
   document.getElementById('colorScheme1').checked = true;
