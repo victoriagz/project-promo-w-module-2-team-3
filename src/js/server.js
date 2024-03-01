@@ -13,6 +13,7 @@ const data = {
 
 const urlAPI = 'https://dev.adalab.es/api/card/';
 
+
 const cardLink = document.querySelector('.js-card-link');
 console.log('urlCard');
 
@@ -32,19 +33,22 @@ const handleShare = (event) => {
         if(data.success){
             handleClickButtonCreate(); 
             //pintar la url (data.cardURL)
-            const textCard = "Echa un vistazo a mi tarjeta de visita 🌱 ";
-            responseElement.innerHTML = `
-              <h3 class="cardcreated-js">La tarjeta ha sido creada:</h3>
-              <p><a class="linkcard" target:_blank href="${resultData.cardURL}">${resultData.cardURL}</a></p>`;
-            responseElement.classList.remove("hidden");
-            btnTwitter.classList.remove("hidden");
-            linkTwitter.setAttribute(
-              "href",
-              `https://twitter.com/intent/tweet?text=${textCard}&url=${resultData.cardURL}&hashtags=Adalabers,JavaScript,PromoMileva,week7of12`
-            );
-            createCard.setAttribute("disabled", true);
-            createCard.style.opacity = "0.5";
-            localStorage.setItem("data", JSON.stringify(data));
+            cardLink.innerHTML = data.cardURL; 
+            console.log(data.cardURL);
+
+            // const textCard = "Echa un vistazo a mi tarjeta de visita 🌱 ";
+            // responseElement.innerHTML = `
+            //   <h3 class="cardcreated-js">La tarjeta ha sido creada:</h3>
+            //   <p><a class="linkcard" target:_blank href="${resultData.cardURL}">${resultData.cardURL}</a></p>`;
+            // responseElement.classList.remove("hidden");
+            // btnTwitter.classList.remove("hidden");
+            // linkTwitter.setAttribute(
+            //   "href",
+            //   `https://twitter.com/intent/tweet?text=${textCard}&url=${resultData.cardURL}&hashtags=Adalabers,JavaScript,PromoMileva,week7of12`
+            // );
+            // createCard.setAttribute("disabled", true);
+            // createCard.style.opacity = "0.5";
+            // localStorage.setItem("data", JSON.stringify(data));
 
 
         // } else {
@@ -54,6 +58,7 @@ const handleShare = (event) => {
         //     responseElement.classList.remove("collapsed");
             
         }
+        
     })
 }
 
