@@ -41,11 +41,12 @@ function handleCollapseShare () {
   const phoneFieldNumber = parseInt(phoneField.value);
 
 
+
   for (const requiredField of requiredFields) {
     if(requiredField.value === '' ) {
       requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
       requiredField.style.border = '1px solid #ad6868';
-
+      placeCursor();
 
     } else {
       requiredField.style.border = '1px solid #a2deaf';
@@ -55,9 +56,11 @@ function handleCollapseShare () {
         } else if (!emailFieldValue.includes('@')) {
           requiredMessage.innerHTML = 'Por favor, introduce un email válido*';
           emailField.style.border = '1px solid #ad6868';
+          requiredFields[2].focus();
         } else if (isNaN(phoneFieldNumber)) {
           requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido*';
           phoneField.style.border = '1px solid #ad6868';
+          requiredFields[3].focus();
         }  else {
           console.log('todos los campos rellenos');
           requiredField.style.border = '';
@@ -71,6 +74,17 @@ function handleCollapseShare () {
 }
 
 
+function placeCursor () {
+  if (requiredFields[0].value === '') {
+    requiredFields[0].focus();
+  } else if (requiredFields[1].value === '') {
+    requiredFields[1].focus();
+  } else if (requiredFields[2].value === '') {
+    requiredFields[2].focus();
+  } else if (requiredFields[3].value === '') {
+    requiredFields[3].focus();
+  }
+}
 
 
   function closeOtherContainers(currentContainer) {
