@@ -43,30 +43,69 @@ function handleCollapseShare () {
     if(requiredField.value === '' ) {
       requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
       requiredField.style.border = '1px solid #ad6868';
-
+      // requiredField[0].focus();
+      // requiredField[1].focus();
+      placeCursor();
+      //console.log('0');
 
     } else {
       requiredField.style.border = '1px solid #a2deaf';
+      //placeCursor();
         if (jobFieldValue === '') {
           requiredMessage.innerHTML = 'Por favor, rellena TU TRABAJO*';
           jobField.style.border = '1px solid #ad6868';
+          //placeCursor();
+          //requiredField.focus();
+          console.log('1');
         } else if (!emailFieldValue.includes('@')) {
           requiredMessage.innerHTML = 'Por favor, introduce un email válido*';
           emailField.style.border = '1px solid #ad6868';
+          requiredFields[2].focus();
+          //requiredField.focus();
+          console.log('2');
         } else if (isNaN(phoneFieldNumber)) {
           requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido*';
           phoneField.style.border = '1px solid #ad6868';
+          requiredFields[3].focus();
+          //requiredField.focus();
+          console.log('3');
         }  else {
           console.log('todos los campos rellenos');
           requiredField.style.border = '';
           requiredField.style.border = '1px solid #a2deaf';
           requiredMessage.innerHTML = 'Todos los campos están rellenos, buen trabajo!';
           handleCollapse (shareContainer, arrowUpShare);
+          console.log('4');
           return;
         } 
     }
   }
 }
+
+function placeCursor () {
+  if (requiredFields[0].value === '') {
+    requiredFields[0].focus();
+  } else if (requiredFields[1].value === '') {
+    requiredFields[1].focus();
+  } else if (requiredFields[2].value === '') {
+    requiredFields[2].focus();
+  } else if (requiredFields[3].value === '') {
+    requiredFields[3].focus();
+  } else if (!emailFieldValue.includes('@')) {
+    requiredFields[2].focus();
+  } else if (isNaN(phoneFieldNumber)) {
+    requiredFields[3].focus();
+  }
+}
+ 
+
+  // function placeCursor() {
+  //  const entryInput = document.querySelectorAll ('.js-required');
+
+  //    if (entryInput.length > 0) {
+  //      entryInput[0].focus(); 
+  //    }
+  // }
 
 
 
