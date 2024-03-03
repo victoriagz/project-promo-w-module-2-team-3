@@ -30,7 +30,6 @@ function obtainCardURL(event) {
 function showURL(result) {
   const cardMessage = document.querySelector(".message_after");
   const cardLinkAnchor = document.querySelector(".js-card-link");
-
   if (result.success) {
     cardMessage.classList.remove("collapsed");
     cardLinkAnchor.classList.remove("collapsed");
@@ -38,7 +37,6 @@ function showURL(result) {
     cardLinkAnchor.innerHTML = result.cardURL;
   } else {
     cardLinkAnchor.innerHTML = "ERROR: " + result.error;
-    cardLinkAnchor.classList.remove("collapsed");
   }
 }
 
@@ -47,7 +45,6 @@ function fillTwitterURL(result) {
     const twitterButton = document.querySelector('.js-twitter-share-button');
     let twitterBaseURL = 'https://twitter.com/intent/tweet';
     let twitterURL = `${twitterBaseURL}?text=Mira qué tarjeta más bonita ❤️&hashtags=PromoW,Adalab&url=${encodeURIComponent(result.cardURL)}`;
-
     twitterButton.setAttribute('href', twitterURL);
   }
 }
