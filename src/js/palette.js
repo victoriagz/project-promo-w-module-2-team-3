@@ -1,13 +1,14 @@
 // Creadas las paletas de colores de nuevo, la función no cogía bien las variables scss
+
 const palette1 = {
   color1: '#114e4e',
-  color2: '#438792',
-  color3: '#a2deaf',
+  color2: '#a2deaf',
+  color3: '#438792',
 };
 const palette2 = {
   color1: '#4B0101',
-  color2: '#8B3A3A',
-  color3: '#FF6347',
+  color2: '#FF6347',
+  color3: '#8B3A3A',
 };
 const palette3 = {
   color1: '#708090',
@@ -31,6 +32,7 @@ const palette6 = {
 };
 
 // Obtenemos del HTML las variables de los radiobuttons:
+
 const radiobutton1 = document.querySelector('.js-radio1');
 const radiobutton2 = document.querySelector('.js-radio2');
 const radiobutton3 = document.querySelector('.js-radio3');
@@ -39,6 +41,7 @@ const radiobutton5 = document.querySelector('.js-radio5');
 const radiobutton6 = document.querySelector('.js-radio6');
 
 // Obtenemos del HTML las variables de las partes de la tarjeta para pintarlas:
+
 const titleCard = document.querySelector('.js_preview_title');
 const borderCard = document.querySelector('.js_border_card');
 const circleCard = document.querySelectorAll('.js_circle_card');
@@ -46,6 +49,7 @@ const circleCard = document.querySelectorAll('.js_circle_card');
 // Creamos una función genérica para todos los radiobuttons pasando luego argumentos distintos.
 // Aplicamos un bucle for en circleCard, porque con querySelectorAll hemos creado un array
 // con los 4 circulos de las redes sociales.
+
 function handleChangeColor(palette) {
   titleCard.style.color = palette.color1;
   borderCard.style.borderColor = palette.color2;
@@ -55,12 +59,35 @@ function handleChangeColor(palette) {
 }
 
 //Creamos un evento por cada radiobutton, para que aplique una paleta determinada:
+
 radiobutton1.addEventListener('click', () => handleChangeColor(palette1));
 radiobutton2.addEventListener('click', () => handleChangeColor(palette2));
 radiobutton3.addEventListener('click', () => handleChangeColor(palette3));
 radiobutton4.addEventListener('click', () => handleChangeColor(palette4));
 radiobutton5.addEventListener('click', () => handleChangeColor(palette5));
 radiobutton6.addEventListener('click', () => handleChangeColor(palette6));
+
+//Obtenemos del HTML los titulos de las paletas:
+
+const title1 = document.querySelector('.js-container-title-1');
+const title2 = document.querySelector('.js-container-title-2');
+const title3 = document.querySelector('.js-container-title-3');
+const title4 = document.querySelector('.js-container-title-4');
+const title5 = document.querySelector('.js-container-title-5');
+const title6 = document.querySelector('.js-container-title-6');
+const totalTitles = document.querySelectorAll('.js-title-grey');
+
+//Creamos una función genérica para que cada título de paleta tenga un color:
+
+function colorTitlePalette(clickedIndex, palette) {
+  for (let i = 0; i < totalTitles.length; i++) {
+    if (i === clickedIndex) {
+      totalTitles[i].style.color = palette.color2;
+    } else {
+      totalTitles[i].style.color = '#54585a';
+    }
+  }
+}
 
 let ChangeImage = document.querySelector('.js-image');
 const button1 = document.querySelector('.js-button1');
@@ -69,47 +96,46 @@ const button3 = document.querySelector('.js-button3');
 const button4 = document.querySelector('.js-button4');
 const button5 = document.querySelector('.js-button5');
 const button6 = document.querySelector('.js-button6');
-const title1 = document.querySelector('.js-container-title-1');
-const title2 = document.querySelector('.js-container-title-2');
-const title3 = document.querySelector('.js-container-title-3');
-const title4 = document.querySelector('.js-container-title-4');
-const title5 = document.querySelector('.js-container-title-5');
-const title6 = document.querySelector('.js-container-title-6');
-const totalTitles = document.querySelectorAll('.js-title-grey');
 const backgroundSection = document.querySelector('.js-card_section');
 
 function onClick1() {
-  ChangeImage.src = "./images/dog-doctor.png";
+  colorTitlePalette(0, palette1);
+  ChangeImage.src = './images/dog-doctor.png';
   backgroundSection.style.backgroundImage =
     'url("https://i.pinimg.com/736x/c8/d5/09/c8d509ae55bbef2cc85a5245a04d850e.jpg")';
   console.log(1);
 }
 function onClick2() {
-  ChangeImage.src = "./images/cat-professor.png";
+  colorTitlePalette(1, palette2);
+  ChangeImage.src = './images/cat-professor.png';
   backgroundSection.style.backgroundImage =
     'url("https://i.pinimg.com/736x/fe/72/94/fe72948b42367756ae7ba55227d48506.jpg")';
   console.log(2);
 }
 function onClick3() {
-  ChangeImage.src = "./images/dog-jalapenio.png";
+  colorTitlePalette(2, palette3);
+  ChangeImage.src = './images/dog-jalapenio.png';
   backgroundSection.style.backgroundImage =
     'url("https://www.gaulan.es/885327-large_default/veneto-marble-680935.jpg")';
   console.log(3);
 }
 function onClick4() {
-  ChangeImage.src = "./images/cat-firefighter.png";
+  colorTitlePalette(3, palette4);
+  ChangeImage.src = './images/cat-firefighter.png';
   backgroundSection.style.backgroundImage =
     'url("https://media.istockphoto.com/id/1459266752/es/foto/fondo-de-textura-de-m%C3%A1rmol-rosa-con-alta-resoluci%C3%B3n-en-patr%C3%B3n-sin-costuras-para-el-dise%C3%B1o-de.webp?b=1&s=170667a&w=0&k=20&c=Vv_-7xnMB2kcO5WwqxNihCUd3b0q7T2cuvS08gp1LnY=")';
   console.log(4);
 }
 function onClick5() {
-  ChangeImage.src = "./images/dog-chef.png";
+  colorTitlePalette(4, palette5);
+  ChangeImage.src = './images/dog-chef.png';
   backgroundSection.style.backgroundImage =
     'url("https://dbdzm869oupei.cloudfront.net/img/vinylrugs/preview/55714.png")';
   console.log(5);
 }
 function onClick6() {
-  ChangeImage.src = "./images/cat-astronaut.png";
+  colorTitlePalette(5, palette6);
+  ChangeImage.src = './images/cat-astronaut.png';
   backgroundSection.style.backgroundImage =
     'url("https://dbdzm869oupei.cloudfront.net/img/sticker/preview/38357.png")';
   console.log(6);
@@ -125,7 +151,7 @@ button6.addEventListener('click', () => onClick6());
 const buttonResetPalette = document.querySelector('.js-reset-palette');
 function PaletteResetClick() {
   resetPreviewImage();
-  handleChangeColor(palette1);
+  colorTitlePalette(0, palette1);
   ChangeImage.src = './images/dog-doctor.png';
   backgroundSection.style.backgroundImage =
     'url("https://i.pinimg.com/736x/c8/d5/09/c8d509ae55bbef2cc85a5245a04d850e.jpg")';
