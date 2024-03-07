@@ -17,12 +17,14 @@ const dropDownSection = document.querySelector('.js_drop_down');
 const buttonCreate = document.querySelector('.js_button_create_card');
 
 //Form fields
+const inputPalette = document.querySelector('.color__container--group');
 const inputName = document.querySelector(".js-name");
 const inputJob = document.querySelector(".js-job");
-const inputEmail = document.querySelector(".js-email");
-const inputPhone = document.querySelector(".js-phone");
-const inputLinkedin = document.querySelector(".js-linkedin"); 
-const inputGithub = document.querySelector(".js-github"); 
+const inputEmail = document.querySelector(".js_email");
+const inputPhone = document.querySelector(".js_phone");
+const inputLinkedin = document.querySelector(".js_linkedin"); 
+const inputGithub = document.querySelector(".js_github"); 
+const inputImage = document.querySelector(".js-image");
 const requiredFields = document.querySelectorAll(".js-required"); 
 const requiredMessage = document.querySelector(".js-field-required-message");
 
