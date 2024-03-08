@@ -26,6 +26,7 @@ const inputGithub = document.querySelector('.js_github');
 const inputImage = document.querySelector('.js-image');
 const requiredFields = document.querySelectorAll('.js-required');
 const requiredMessage = document.querySelector('.js-field-required-message');
+const paragraphWarning = document.querySelector('.js-paragraph-warning');
 
 // const nameField = requiredFields[0];
 // const nameFieldValue = nameField.value;
@@ -41,7 +42,8 @@ function handleCollapseShare() {
 
   for (const requiredField of requiredFields) {
     if (requiredField.value === '') {
-      requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
+      requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan *';
+      paragraphWarning.innerHTML = '* Por favor, completa los campos de la sección RELLENA';
       requiredField.style.border = '1px solid #ad6868';
       placeCursor();
     } else {
@@ -83,12 +85,15 @@ function placeCursor() {
 function closeOtherContainers(currentContainer) {
   if (currentContainer !== designContainer) {
     designContainer.classList.add('collapsed');
+    paragraphWarning.innerHTML = '';
   }
   if (currentContainer !== formContainer) {
     formContainer.classList.add('collapsed');
+    paragraphWarning.innerHTML = '';
   }
   if (currentContainer !== shareContainer) {
     shareContainer.classList.add('collapsed');
+    paragraphWarning.innerHTML = '';
   }
 }
 
@@ -105,8 +110,6 @@ const handleClickButtonCreate = (event) => {
     dropDown.classList.remove('collapsed');
     buttonCreate.style.display = 'none';
     shareContainer.style.paddingBottom = '0px';
-    // buttonCreate.style.backgroundColor = '#d5d5d5';
-    // buttonCreate.style.pointerEvents = 'none';
   }
 };
 
