@@ -96,7 +96,7 @@
       &__bottom_line {
         border-bottom: 1px solid $color-secondary-light-grey;
         width: 86%;
-        margin: 30px 7% 0 7%;
+        margin: 20px 7% 0 7%;
       }
     }
   }
@@ -109,6 +109,8 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  gap: 5px;
+  align-items: center;
 
   .message_after {
     font-family: $font-main;
@@ -128,7 +130,7 @@
 
   .twitter_button {
     background-color: $color-secondary-bright-blue;
-    border-radius: 3px;
+    border-radius: 7px;
     padding: 9px 0px 7px 0px;
     display: flex;
     justify-content: center;
@@ -154,5 +156,45 @@
   .footer_line {
     border-bottom: 1px solid $color-secondary-light-grey;
     padding-top: 30px;
+  }
+
+  &__new_card {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 15px 0;
+    :hover {
+      background-color: rgb(185, 70, 4);
+      transition: 0.5s ease;
+    }
+
+    & button {
+      border: none;
+      color: $color-white;
+      background-color: #e09f3e;
+      padding: 13px 16px 13px 16px;
+      border-radius: 12px;
+      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: url('/images/paw2.png') 10 10, auto;
+      :hover {
+        background-color: rgb(185, 70, 4);
+        transition: 0.5s ease;
+      }
+
+      & i {
+        font-size: 23px;
+      }
+
+      & a {
+        color: $color-white;
+        font-family: $font-main;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: url('/images/paw2.png') 10 10, auto;
+      }
+    }
   }
 }
