@@ -1,4 +1,4 @@
-const urlAPI = "https://dev.adalab.es/api/card/";
+const urlAPI = 'https://dev.adalab.es/api/card/';
 
 function obtainCardURL(event) {
   event.preventDefault();
@@ -14,10 +14,10 @@ function obtainCardURL(event) {
     photo: inputImage.src,
   };
 
-  fetch("https://dev.adalab.es/api/card/", {
-    method: "POST",
+  fetch('https://dev.adalab.es/api/card/', {
+    method: 'POST',
     body: JSON.stringify(data),
-    headers: { "Content-type": "application/json" },
+    headers: { 'Content-type': 'application/json' },
   })
     .then((response) => response.json())
     .then((result) => {
@@ -28,15 +28,15 @@ function obtainCardURL(event) {
 }
 
 function showURL(result) {
-  const cardMessage = document.querySelector(".message_after");
-  const cardLinkAnchor = document.querySelector(".js-card-link");
+  const cardMessage = document.querySelector('.message_after');
+  const cardLinkAnchor = document.querySelector('.js-card-link');
   if (result.success) {
-    cardMessage.classList.remove("collapsed");
-    cardLinkAnchor.classList.remove("collapsed");
-    cardLinkAnchor.setAttribute("href", result.cardURL);
+    cardMessage.classList.remove('collapsed');
+    cardLinkAnchor.classList.remove('collapsed');
+    cardLinkAnchor.setAttribute('href', result.cardURL);
     cardLinkAnchor.innerHTML = result.cardURL;
   } else {
-    cardLinkAnchor.innerHTML = "ERROR: " + result.error;
+    cardLinkAnchor.innerHTML = 'ERROR: ' + result.error;
   }
 }
 
@@ -44,10 +44,19 @@ function fillTwitterURL(result) {
   if (result.success) {
     const twitterButton = document.querySelector('.js-twitter-share-button');
     let twitterBaseURL = 'https://twitter.com/intent/tweet';
-    let twitterURL = `${twitterBaseURL}?text=Mira qué tarjeta más bonita ❤️&hashtags=PromoW,Adalab&url=${encodeURIComponent(result.cardURL)}`;
+    let twitterURL = `${twitterBaseURL}?text=Mira qué tarjeta más bonita ❤️&hashtags=PromoW,Adalab&url=${encodeURIComponent(
+      result.cardURL
+    )}`;
     twitterButton.setAttribute('href', twitterURL);
   }
 }
 
-const shareContainerForCardURL = document.querySelector(".js-share");
-shareContainerForCardURL.addEventListener("click", obtainCardURL);
+const shareContainerForCardURL = document.querySelector('.js-share');
+shareContainerForCardURL.addEventListener('click', obtainCardURL);
+
+const buttonNewCard = document.querySelector('.js-new-card');
+
+function refreshPage() {
+  location.reload;
+}
+buttonNewCard.addEventListener('click');
