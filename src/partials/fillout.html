@@ -2,14 +2,11 @@
 <fieldset class="form__box_form">
   <legend class="form__heading_form">
     <i class="fa-regular fa-keyboard" aria-hidden="true"></i>
-
     <h2 class="title_form js-text-form">RELLENA</h2>
     <i class="fa-solid fa-paw js-arrow-up-form" aria-hidden="true"></i>
   </legend>
 
   <div class="form__design__input js-form collapsed">
-    <!-- Complete name -->
-
     <label class="form__label" for="name">Nombre completo<span class="asterisk">*</span></label>
     <input
       type="text"
@@ -18,11 +15,10 @@
       class="js-name js-required"
       placeholder="Ej: Sally Hill"
       required
-      pattern="^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$"
+      pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s'-]+$"
       title="Ingrese un nombre y apellidos válidos."
     />
 
-    <!-- Job position -->
     <label class="form__label" for="job">Puesto<span class="asterisk">*</span></label>
     <input
       type="text"
@@ -31,11 +27,10 @@
       class="js-job js-required"
       placeholder="Ej: Front-end unicorn"
       required
-      pattern="^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$"
+      pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s'-]+$"
       title="Ingrese una profesión válida."
     />
 
-    <!-- IMAGEN -->
     <label class="form__label" for="image">Imagen de perfil</label>
     <div class="action">
       <label class="js-button_pic action__upload-btn slide_down" for="image">Añadir imagen</label>
@@ -49,12 +44,8 @@
         required
         title="Ingrese un formato de imagen válido."
       />
-      <!-- con accept="image/*", sólo se previsualizará cuando el archivo sea formato de imagen -->
-
       <div class="profile__preview js__profile-preview"></div>
     </div>
-
-    <!-- Email -->
 
     <label class="form__label" for="email">Email<span class="asterisk">*</span></label>
     <input
@@ -64,10 +55,10 @@
       class="js_email js-required"
       placeholder="sally-hill@gmail.com"
       required
+      pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
       title="Ingrese un formato válido."
     />
 
-    <!-- Phone Number -->
     <label class="form__label" for="phone">Teléfono<span class="asterisk">*</span></label>
     <input
       type="tel"
@@ -76,11 +67,10 @@
       class="js_phone js-required"
       placeholder="Ej: 555-55-55-55"
       required
-      pattern="^[0-9]+$"
+      pattern="^\+?\d+(\.\d+)?$"
       title="Ingrese un número válido en formato español o internacional."
     />
 
-    <!-- Linkedin -->
     <label class="form__label js-linkedin" for="linkedin">Linkedin</label>
     <input
       type="text"
@@ -89,11 +79,10 @@
       class="js_linkedin"
       placeholder="Ej: linkedin.com/in/sally.hill"
       required
-      pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"
+      pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
       title="Ingrese un formato válido."
     />
 
-    <!-- Github -->
     <label class="form__label js-github" for="github">Github</label>
     <input
       type="text"
@@ -102,11 +91,9 @@
       class="js_github"
       placeholder="Ej: @sally-hill"
       required
-      pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"
+      pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
       title="Ingrese un formato válido."
     />
-
-    <!-- Message: required to fill out field -->
     <p class="required-message js-field-required-message"></p>
 
     <input type="submit" id="hiddenSubmit" style="display: none" />
