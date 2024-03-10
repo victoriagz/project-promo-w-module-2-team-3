@@ -3,7 +3,6 @@
     margin-top: 4px;
   }
 
-
   .action__upload-btn {
     cursor: url('/images/paw2.png') 10 10, auto;
         text-align: center;
@@ -27,8 +26,6 @@
     }
   
   .action__hiddenField {
-    /* Ocultamos el input de tipo "file" porque no podemos 
-    darle los estilos que queremos */
     display: none;
   }
   
@@ -37,6 +34,7 @@
     display: flex;
     justify-content: center;
   }
+  
   .profile__image,
   .profile__preview {
     background-position: center;

@@ -1,7 +1,3 @@
-// sections > section1 + section2
-// select_seccion > , section2=  desing , fillout, share. 
-
-
 .sections {
     display: flex;
     flex-direction: column;
@@ -18,8 +14,6 @@
         height: 80%;
     }
 }
-
-
 
 .card_section {
     padding: 5px 35px 50px 35px;
