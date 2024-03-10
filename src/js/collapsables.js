@@ -1,21 +1,14 @@
-//Arrows & texts
 const arrowUpDesign = document.querySelector('.js-arrow-up-design');
 const arrowUpForm = document.querySelector('.js-arrow-up-form');
 const arrowUpShare = document.querySelector('.js-arrow-up-share');
 const textDesign = document.querySelector('.js-text-design');
 const textForm = document.querySelector('.js-text-form');
 const textShare = document.querySelector('.js-text-share');
-
-//Containers
 const designContainer = document.querySelector('.js-color-container');
 const formContainer = document.querySelector('.js-form');
 const shareContainer = document.querySelector('.js-share');
 const dropDownSection = document.querySelector('.js_drop_down');
-
-//Create button
 const buttonCreate = document.querySelector('.js_button_create_card');
-
-//Form fields
 const inputPalette = document.querySelector('.color__container--group');
 const inputName = document.querySelector('.js-name');
 const inputJob = document.querySelector('.js-job');
@@ -93,7 +86,6 @@ function handleCollapse(container) {
   container.classList.toggle('collapsed');
 }
 
-// Collapsable create button
 const handleClickButtonCreate = (event) => {
   const dropDown = document.querySelector('.js_drop_down');
   event.preventDefault();

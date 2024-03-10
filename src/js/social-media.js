@@ -1,5 +1,3 @@
-// Social Media Links
-
 function updateContactLinks() {
   const emailInput = document.querySelector('.js_email');
   const emailLink = document.getElementById('social__email__id');

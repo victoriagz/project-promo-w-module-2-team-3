@@ -49,8 +49,6 @@ const title5 = document.querySelector('.js-container-title-5');
 const title6 = document.querySelector('.js-container-title-6');
 const totalTitles = document.querySelectorAll('.js-title-grey');
 
-// Función genérica para pintar la tarjeta
-
 function handleChangeColor(palette) {
   titleCard.style.color = palette.color1;
   borderCard.style.borderColor = palette.color2;
@@ -58,8 +56,6 @@ function handleChangeColor(palette) {
     circleCard[i].style.borderColor = palette.color3;
   }
 }
-
-//Función genérica para que cada título de paleta tenga un color:
 
 function colorTitlePalette(clickedIndex, palette) {
   for (let i = 0; i < totalTitles.length; i++) {
@@ -71,8 +67,6 @@ function colorTitlePalette(clickedIndex, palette) {
   }
 }
 
-//Hacemos una función para cada radiobutton:
-
 function onClick1() {
   handleChangeColor(palette1);
   colorTitlePalette(0, palette1);
@@ -81,6 +75,7 @@ function onClick1() {
     'url("https://i.pinimg.com/736x/c8/d5/09/c8d509ae55bbef2cc85a5245a04d850e.jpg")';
   paletteId = 1;
 }
+
 function onClick2() {
   handleChangeColor(palette2);
   colorTitlePalette(1, palette2);
@@ -89,6 +84,7 @@ function onClick2() {
     'url("https://i.pinimg.com/736x/fe/72/94/fe72948b42367756ae7ba55227d48506.jpg")';
   paletteId = 2;
 }
+
 function onClick3() {
   handleChangeColor(palette3);
   colorTitlePalette(2, palette3);
@@ -113,6 +109,7 @@ function onClick5() {
     'url("https://dbdzm869oupei.cloudfront.net/img/vinylrugs/preview/55714.png")';
   paletteId = 5;
 }
+
 function onClick6() {
   handleChangeColor(palette6);
   colorTitlePalette(5, palette6);
@@ -138,6 +135,7 @@ function paletteResetClick() {
     'url("https://i.pinimg.com/736x/c8/d5/09/c8d509ae55bbef2cc85a5245a04d850e.jpg")';
   document.getElementById('colorScheme1').checked = true;
 }
+
 buttonResetPalette.addEventListener('click', paletteResetClick);
 
 const buttonAddImg = document.querySelector('.js-button_pic');
