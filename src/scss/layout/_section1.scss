@@ -1,0 +1,90 @@
+.reset_button {
+  margin: 40px 200px 0px 0px;
+  font-size: 12px;
+  width: 75px;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  font-family: $font-main;
+  background-color: transparent;
+  border: 1px solid white;
+  color: #54585a;
+  cursor: url('/images/paw2.png') 10 10, auto;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.reset_button:hover {
+  background-color: white;
+  color: black;
+}
+
+.section_1 {
+  width: 240px;
+  padding: 20px 0 12px 0;
+  background-color: $color-white;
+  box-shadow: 1px 1px 5px #666;
+}
+
+.profile {
+  padding: 45px 0 0 45px;
+}
+
+.card_texts {
+  border-left: solid 5px $color-secondary-medium;
+}
+
+.card__title {
+  margin-left: 20px;
+  margin-bottom: 4px;
+  color: $color-secondary-dark;
+  font-size: 24px;
+  font-family: $font-secondary;
+}
+
+.card__text {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-family: $font-secondary;
+  color: #54585a;
+  font-size: 16px;
+}
+
+.picture {
+  width: 240px;
+  margin-bottom: 10px;
+  height: 200px;
+}
+
+.rrss ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-right: 30px;
+  padding: 0px;
+}
+
+.rrss ul li a i {
+  cursor: url('/images/paw2.png') 10 10, auto;
+  color: $color-secondary-dark;
+}
+
+.rrss ul li {
+  cursor: url('/images/paw2.png') 10 10, auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  border-radius: 50% solid;
+}
+
+.fa-brands {
+  font-size: 19px;
+}
+
+.social_card {
+  border: 2px solid $color-secondary-light;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 0 0 10px;
+  padding: 4px;
+}
