@@ -26,7 +26,6 @@ const inputGithub = document.querySelector('.js_github');
 const inputImage = document.querySelector('.js-image');
 const requiredFields = document.querySelectorAll('.js-required');
 const requiredMessage = document.querySelector('.js-field-required-message');
-const paragraphWarning = document.querySelector('.js-paragraph-warning');
 
 function handleCollapseShare() {
   //RECORDATORIO: Si sacamos estas constantes fuera de la función, da error en el input trabajo
@@ -40,7 +39,6 @@ function handleCollapseShare() {
   for (const requiredField of requiredFields) {
     if (requiredField.value === '') {
       requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan *';
-      paragraphWarning.innerHTML = '* Por favor, completa los campos de la sección RELLENA';
       requiredField.style.border = '1px solid #ad6868';
       placeCursor();
     } else {
@@ -81,15 +79,12 @@ function placeCursor() {
 function closeOtherContainers(currentContainer) {
   if (currentContainer !== designContainer) {
     designContainer.classList.add('collapsed');
-    paragraphWarning.innerHTML = '';
   }
   if (currentContainer !== formContainer) {
     formContainer.classList.add('collapsed');
-    paragraphWarning.innerHTML = '';
   }
   if (currentContainer !== shareContainer) {
     shareContainer.classList.add('collapsed');
-    paragraphWarning.innerHTML = '';
   }
 }
 
