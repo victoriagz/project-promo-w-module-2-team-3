@@ -34,16 +34,8 @@
     <label class="form__label" for="image">Imagen de perfil</label>
     <div class="action">
       <label class="js-button_pic action__upload-btn slide_down" for="image">Añadir imagen</label>
-      <input
-        type="file"
-        name="image"
-        id="image"
-        style="display: none"
-        class="collapsed js__profile-upload-btn"
-        accept="image/*"
-        required
-        title="Ingrese un formato de imagen válido."
-      />
+      <input type="file" name="image" id="image" style="display: none" class="collapsed js__profile-upload-btn js-required"
+        accept="image/*" required title="Ingrese un formato de imagen válido." />
       <div class="profile__preview js__profile-preview"></div>
     </div>
 
@@ -72,6 +64,7 @@
     />
 
     <label class="form__label js-linkedin" for="linkedin">Linkedin</label>
+<<<<<<< HEAD
     <input
       type="text"
       id="linkedin"
@@ -79,6 +72,14 @@
       class="js_linkedin"
       placeholder="Ej: linkedin.com/in/sally.hill"
       required
+=======
+    <input type="text" id="linkedin" name="linkedin" class="js_linkedin js-required" placeholder="Ej: linkedin.com/in/sally.hill"
+      required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+      title="Ingrese un formato válido." />
+      
+    <label class="form__label js-github" for="github">Github</label>
+    <input type="text" id="github" name="github" class="js_github js-required" placeholder="Ej: @sally-hill" required
+>>>>>>> 04e875c3e17a1fc678c0aa4b2f801904b7c7d77f
       pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
       title="Ingrese un formato válido."
     />
