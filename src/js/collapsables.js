@@ -28,13 +28,10 @@ const inputImage = document.querySelector(".js-image");
 const requiredFields = document.querySelectorAll(".js-required"); 
 const requiredMessage = document.querySelector(".js-field-required-message");
 
-// const nameField = requiredFields[0];
-// const nameFieldValue = nameField.value;
 
 
 function handleCollapseShare () {
 
-  //RECORDATORIO: Si sacamos estas constantes fuera de la función, da error en el input trabajo
   const jobField = requiredFields[1];
   const jobFieldValue = jobField.value;
   const emailField = requiredFields[2];
@@ -59,10 +56,10 @@ function handleCollapseShare () {
         if (jobFieldValue === '') {
           requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
           jobField.style.border = '1px solid #ad6868';
-        } else if (!emailFieldValue.includes('@')) {
-          requiredMessage.innerHTML = 'Por favor, introduce un email válido*';
-          emailField.style.border = '1px solid #ad6868';
-          requiredFields[2].focus();
+        // } else if (!emailFieldValue.includes('@')) {
+        //   requiredMessage.innerHTML = 'Por favor, introduce un email válido*';
+        //   emailField.style.border = '1px solid #ad6868';
+        //   requiredFields[2].focus();
         } else if (isNaN(phoneFieldNumber)) {
           requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido*';
           phoneField.style.border = '1px solid #ad6868';
@@ -100,8 +97,6 @@ function placeCursor () {
     requiredFields[4].focus();
   } else if (requiredFields[5].value === '') {
     requiredFields[5].focus();
-  // } else if (requiredFields[6].value === '') {
-  //   requiredFields[6].focus();
  }
 }
 
