@@ -61,11 +61,12 @@ function handleCollapseShare () {
 function placeCursor() {
   for (const field of requiredFields) {
     if (field.value === '') {
-      field.focus(); 
-      break;
+      field.focus();
+      break; 
     }
   }
 }
+
   function closeOtherContainers(currentContainer) {
     if (currentContainer !== designContainer) {
       designContainer.classList.add('collapsed');
