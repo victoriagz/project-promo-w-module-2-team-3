@@ -84,6 +84,12 @@ function placeCursor () {
     requiredFields[2].focus();
   } else if (requiredFields[3].value === '') {
     requiredFields[3].focus();
+  } else if (requiredFields[4].value === '') {
+    requiredFields[4].focus();
+  } else if (requiredFields[5].value === '') {
+    requiredFields[5].focus();
+  } else if (requiredFields[6].value === '') {
+    requiredFields[6].focus();
   }
 }
 
