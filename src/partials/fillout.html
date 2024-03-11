@@ -15,7 +15,6 @@
       class="js-name js-required"
       placeholder="Ej: Sally Hill"
       required
-      pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s'-]+$"
       title="Ingrese un nombre y apellidos válidos."
     />
 
@@ -27,11 +26,10 @@
       class="js-job js-required"
       placeholder="Ej: Front-end unicorn"
       required
-      pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s'-]+$"
       title="Ingrese una profesión válida."
     />
 
-    <label class="form__label" for="image">Imagen de perfil</label>
+    <label class="form__label" for="image">Imagen de perfil<span class="asterisk">*</span></label>
     <div class="action">
       <label class="js-button_pic action__upload-btn slide_down" for="image">Añadir imagen</label>
       <input
@@ -52,10 +50,9 @@
       type="email"
       id="email"
       name="email"
-      class="js_email js-required"
+      class="js-email js-required"
       placeholder="sally-hill@gmail.com"
       required
-      pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
       title="Ingrese un formato válido."
     />
 
@@ -64,48 +61,34 @@
       type="tel"
       id="phone"
       name="phone"
-      class="js_phone js-required"
+      class="js-phone js-required"
       placeholder="Ej: 555-55-55-55"
       required
-      pattern="^\+?\d+(\.\d+)?$"
       title="Ingrese un número válido en formato español o internacional."
     />
 
-    <label class="form__label js-linkedin" for="linkedin">Linkedin</label>
+    <label class="form__label js-linkedin" for="linkedin">Linkedin<span class="asterisk">*</span></label>
     <input
       type="text"
       id="linkedin"
       name="linkedin"
-      class="js_linkedin js-required"
+      class="js-linkedin js-required"
       placeholder="Ej: linkedin.com/in/sally.hill"
       required
-      pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
       title="Ingrese un formato válido."
     />
 
-    <label class="form__label js-github" for="github">Github</label>
+    <label class="form__label js-github" for="github">Github<span class="asterisk">*</span></label>
     <input
       type="text"
       id="github"
       name="github"
-      class="js_github js-required"
+      class="js-github js-required"
       placeholder="Ej: @sally-hill"
       required
-      pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
       title="Ingrese un formato válido."
     />
 
-    <label class="form__label js-github" for="github">Github</label>
-    <input
-      type="text"
-      id="github"
-      name="github"
-      class="js_github"
-      placeholder="Ej: @sally-hill"
-      required
-      pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-      title="Ingrese un formato válido."
-    />
     <p class="required-message js-field-required-message"></p>
 
     <input type="submit" id="hiddenSubmit" style="display: none" />

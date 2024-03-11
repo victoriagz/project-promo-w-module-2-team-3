@@ -59,4 +59,4 @@ const buttonNewCard = document.querySelector('.js-new-card');
 function refreshPage() {
   location.reload;
 }
-buttonNewCard.addEventListener('click');
+buttonNewCard.addEventListener('click', refreshPage);
