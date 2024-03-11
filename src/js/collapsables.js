@@ -28,85 +28,44 @@ const inputImage = document.querySelector(".js-image");
 const requiredFields = document.querySelectorAll(".js-required"); 
 const requiredMessage = document.querySelector(".js-field-required-message");
 
-// const nameField = requiredFields[0];
-// const nameFieldValue = nameField.value;
-
-
 function handleCollapseShare () {
-
-  //RECORDATORIO: Si sacamos estas constantes fuera de la función, da error en el input trabajo
-  const jobField = requiredFields[1];
-  const jobFieldValue = jobField.value;
-  const emailField = requiredFields[2];
-  const emailFieldValue = emailField.value;
-  const phoneField = requiredFields[3];
-  const phoneFieldNumber = parseInt(phoneField.value);
-  const linkedinField = requiredFields[4];
-  const linkedinFieldValue = linkedinField.value;
-  const githubField = requiredFields[5];
-  const githubFieldValue = githubField.value;
-
-
+  let isFormValid = true; 
 
   for (const requiredField of requiredFields) {
     if(requiredField.value === '' ) {
       requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
       requiredField.style.border = '1px solid #ad6868';
-      placeCursor();
-      return; 
-
+      isFormValid = false; 
     } else {
       requiredField.style.border = '1px solid #a2deaf';
-        if (jobFieldValue === '') {
-          requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
-          jobField.style.border = '1px solid #ad6868';
-        } else if (!emailFieldValue.includes('@')) {
-          requiredMessage.innerHTML = 'Por favor, introduce un email válido*';
-          emailField.style.border = '1px solid #ad6868';
-          requiredFields[2].focus();
-          return;
-        } else if (isNaN(phoneFieldNumber)) {
-          requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido*';
-          phoneField.style.border = '1px solid #ad6868';
-          requiredFields[3].focus();
-        } else if (linkedinFieldValue === '') {
-          requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
-          linkedinField.style.border = '1px solid #ad6868';
-        } else if (githubFieldValue === '') {
-          requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
-          githubField.style.border = '1px solid #ad6868';
-        }  else {
-          console.log('todos los campos rellenos');
-          requiredMessage.innerHTML = ''; 
-          requiredField.style.border = '';
-          requiredField.style.border = '1px solid #a2deaf';
-          githubField.style.border = '1px solid #a2deaf';
-          handleCollapse (shareContainer, arrowUpShare);
-          return;
-        } 
     }
+  }
+
+  if (!inputEmail.value.includes('@')) {
+    requiredMessage.innerHTML = 'Por favor, introduce un email válido*';
+    inputEmail.style.border = '1px solid #ad6868';
+    inputEmail.focus();
+    isFormValid = false;
+  }
+
+  if (isFormValid) {
+    console.log('todos los campos rellenos y el email es válido');
+    requiredMessage.innerHTML = '';
+    for (const requiredField of requiredFields) {
+      requiredField.style.border = '1px solid #a2deaf';
+    }
+    handleCollapse(shareContainer, arrowUpShare);
   }
 }
 
-
-function placeCursor () {
-  if (requiredFields[0].value === '') {
-    requiredFields[0].focus();
-  } else if (requiredFields[1].value === '') {
-    requiredFields[1].focus();
-  } else if (requiredFields[2].value === '') {
-    requiredFields[2].focus();
-  } else if (requiredFields[3].value === '') {
-     requiredFields[3].focus();
-  } else if (requiredFields[4].value === '') {
-    requiredFields[4].focus();
-  } else if (requiredFields[5].value === '') {
-    requiredFields[5].focus();
-  // } else if (requiredFields[6].value === '') {
-  //   requiredFields[6].focus();
- }
+function placeCursor() {
+  for (const field of requiredFields) {
+    if (field.value === '') {
+      field.focus();
+      break; 
+    }
+  }
 }
-
 
   function closeOtherContainers(currentContainer) {
     if (currentContainer !== designContainer) {
