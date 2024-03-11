@@ -53,6 +53,7 @@ function handleCollapseShare () {
       requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
       requiredField.style.border = '1px solid #ad6868';
       placeCursor();
+      return; 
 
     } else {
       requiredField.style.border = '1px solid #a2deaf';
@@ -63,6 +64,7 @@ function handleCollapseShare () {
           requiredMessage.innerHTML = 'Por favor, introduce un email válido*';
           emailField.style.border = '1px solid #ad6868';
           requiredFields[2].focus();
+          return;
         } else if (isNaN(phoneFieldNumber)) {
           requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido*';
           phoneField.style.border = '1px solid #ad6868';
