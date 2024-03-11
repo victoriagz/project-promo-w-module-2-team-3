@@ -6,7 +6,6 @@
   gap: 10px;
   padding: 20px;
   width: 100%;
-  // height: 340px;
 }
 
 .form__box {
@@ -120,7 +119,9 @@
 .js-container-title-6:hover {
   color: #620097;
 }
-
+.js-container-title-1 {
+  color: #a2deaf;
+}
 .swatch1 {
   background-color: $color-secondary-dark;
 }
@@ -157,7 +158,6 @@
   background-color: $color-light-grey-blue;
 }
 
-// ================PALETTE 4 PINK =================
 .swatch10 {
   background-color: #ffc8dd;
 }
@@ -170,8 +170,6 @@
   background-color: #bde0fe;
 }
 
-// ================PALETTE 5 BLUE=================
-
 .swatch13 {
   background-color: #4a8fe7;
 }
@@ -183,8 +181,6 @@
 .swatch15 {
   background-color: #44e5e7;
 }
-
-// ================PALETTE 6 PURPLE=================
 
 .swatch16 {
   background-color: #e2dada;

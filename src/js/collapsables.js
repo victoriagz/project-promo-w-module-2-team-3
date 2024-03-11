@@ -17,12 +17,14 @@ const dropDownSection = document.querySelector('.js_drop_down');
 const buttonCreate = document.querySelector('.js_button_create_card');
 
 //Form fields
+const inputPalette = document.querySelector('.color__container--group');
 const inputName = document.querySelector(".js-name");
 const inputJob = document.querySelector(".js-job");
 const inputEmail = document.querySelector(".js-email");
 const inputPhone = document.querySelector(".js-phone");
-const inputLinkedin = document.querySelector(".js-linkedin"); 
-const inputGithub = document.querySelector(".js-github"); 
+const inputLinkedin = document.querySelector(".js-linkedin-2"); 
+const inputGithub = document.querySelector(".js-github-2"); 
+const inputImage = document.querySelector(".js-image");
 const requiredFields = document.querySelectorAll(".js-required"); 
 const requiredMessage = document.querySelector(".js-field-required-message");
 
@@ -39,30 +41,44 @@ function handleCollapseShare () {
   const emailFieldValue = emailField.value;
   const phoneField = requiredFields[3];
   const phoneFieldNumber = parseInt(phoneField.value);
+  const linkedinField = requiredFields[4];
+  const linkedinFieldValue = linkedinField.value;
+  const githubField = requiredFields[5];
+  const githubFieldValue = githubField.value;
+
 
 
   for (const requiredField of requiredFields) {
     if(requiredField.value === '' ) {
       requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
       requiredField.style.border = '1px solid #ad6868';
-
+      placeCursor();
 
     } else {
       requiredField.style.border = '1px solid #a2deaf';
         if (jobFieldValue === '') {
-          requiredMessage.innerHTML = 'Por favor, rellena TU TRABAJO*';
+          requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
           jobField.style.border = '1px solid #ad6868';
         } else if (!emailFieldValue.includes('@')) {
           requiredMessage.innerHTML = 'Por favor, introduce un email válido*';
           emailField.style.border = '1px solid #ad6868';
+          requiredFields[2].focus();
         } else if (isNaN(phoneFieldNumber)) {
           requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido*';
           phoneField.style.border = '1px solid #ad6868';
+          requiredFields[3].focus();
+        } else if (linkedinFieldValue === '') {
+          requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
+          linkedinField.style.border = '1px solid #ad6868';
+        } else if (githubFieldValue === '') {
+          requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
+          githubField.style.border = '1px solid #ad6868';
         }  else {
           console.log('todos los campos rellenos');
+          requiredMessage.innerHTML = ''; 
           requiredField.style.border = '';
           requiredField.style.border = '1px solid #a2deaf';
-          requiredMessage.innerHTML = 'Todos los campos están rellenos, buen trabajo!';
+          githubField.style.border = '1px solid #a2deaf';
           handleCollapse (shareContainer, arrowUpShare);
           return;
         } 
@@ -71,6 +87,23 @@ function handleCollapseShare () {
 }
 
 
+function placeCursor () {
+  if (requiredFields[0].value === '') {
+    requiredFields[0].focus();
+  } else if (requiredFields[1].value === '') {
+    requiredFields[1].focus();
+  } else if (requiredFields[2].value === '') {
+    requiredFields[2].focus();
+  } else if (requiredFields[3].value === '') {
+     requiredFields[3].focus();
+  } else if (requiredFields[4].value === '') {
+    requiredFields[4].focus();
+  } else if (requiredFields[5].value === '') {
+    requiredFields[5].focus();
+  // } else if (requiredFields[6].value === '') {
+  //   requiredFields[6].focus();
+ }
+}
 
 
   function closeOtherContainers(currentContainer) {

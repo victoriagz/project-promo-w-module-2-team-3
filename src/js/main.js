@@ -5,5 +5,5 @@ import './palette.js';
 import './autofill-card.js';
 import './get-avatar.js';
 import './social-media.js';
-import './reset.js'
-import './server.js';
+import './reset.js';
+import './share.js';
