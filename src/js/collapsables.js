@@ -27,7 +27,9 @@ const inputImage = document.querySelector(".js-image");
 const requiredFields = document.querySelectorAll(".js-required");
 const requiredMessage = document.querySelector(".js-field-required-message");
 
-function handleCollapseShare() {
+function handleCollapseShare(event) {
+  event.preventDefault();
+  
   const nameField = requiredFields[0];
   const nameFieldValue = nameField.value;
 
