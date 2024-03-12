@@ -28,6 +28,7 @@ const requiredFields = document.querySelectorAll(".js-required");
 const requiredMessage = document.querySelector(".js-field-required-message");
 
 function handleCollapseShare() {
+  console.log('successful deploy');
 
   const nameField = requiredFields[0];
   const nameFieldValue = nameField.value;
