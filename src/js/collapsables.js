@@ -64,8 +64,8 @@ function handleCollapseShare() {
   }
   jobField.style.border = "1px solid #a2deaf";
 
-  if (emailFieldValuedValue === "") {
-    requiredMessage.innerHTML = "Por favor, introduce un email válido*";
+  if (emailFieldValue  === "") {
+    requiredMessage.innerHTML = "Por favor, rellena los campos que faltan*";
     emailField.style.border = "1px solid #ad6868";
     emailField.focus();
     return;
@@ -81,8 +81,8 @@ function handleCollapseShare() {
   emailField.style.border = "1px solid #a2deaf";
 
   if (phoneFieldNumber === "") {
-    requiredMessage.innerHTML = "Por favor, introduce un teléfono válido*";
-    phoneFieldField.style.border = "1px solid #ad6868";
+    requiredMessage.innerHTML = "Por favor, rellena los campos que faltan*";
+    phoneField.style.border = "1px solid #ad6868";
     phoneField.focus();
     return;
   }
