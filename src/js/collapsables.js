@@ -64,6 +64,14 @@ function handleCollapseShare() {
   }
   jobField.style.border = "1px solid #a2deaf";
 
+  if (emailFieldValuedValue === "") {
+    requiredMessage.innerHTML = "Por favor, introduce un email válido*";
+    emailField.style.border = "1px solid #ad6868";
+    emailField.focus();
+    return;
+  }
+  emailField.style.border = "1px solid #a2deaf";
+
   if (!emailFieldValue.includes("@")) {
     requiredMessage.innerHTML = "Por favor, introduce un email válido*";
     emailField.style.border = "1px solid #ad6868";
@@ -71,6 +79,14 @@ function handleCollapseShare() {
     return;
   }
   emailField.style.border = "1px solid #a2deaf";
+
+  if (phoneFieldNumber === "") {
+    requiredMessage.innerHTML = "Por favor, introduce un teléfono válido*";
+    phoneFieldField.style.border = "1px solid #ad6868";
+    phoneField.focus();
+    return;
+  }
+  phoneField.style.border = "1px solid #a2deaf";
 
   if (isNaN(phoneFieldNumber)) {
     requiredMessage.innerHTML = "Por favor, introduce un teléfono válido*";
