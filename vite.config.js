@@ -31,12 +31,12 @@ const inputFilesList = {
 }
 
 export default defineConfig({
-  base: "./",
+  base: "/project-promo-w-module-2-team-3/",
   root: "src",
   publicDir: "../public",
   build: {
     minify: "esbuild",
-    outDir: "../docs",
+    outDir: "dist",
     sourcemap: "inline",
     emptyOutDir: true,
     rollupOptions: {
