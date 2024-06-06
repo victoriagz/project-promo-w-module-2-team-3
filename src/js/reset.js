@@ -37,7 +37,7 @@ const handleResetButtonClick = () => {
 
   const allInputFields = document.querySelectorAll(".js-required");
   for (let i = 0; i < allInputFields.length; i++) {
-    allInputFields[i].style.border = "none";
+    allInputFields[i].style.border = "1px solid black";
     requiredMessage.innerHTML = "";
   }
 };

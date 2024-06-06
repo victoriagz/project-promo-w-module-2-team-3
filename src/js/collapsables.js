@@ -70,7 +70,7 @@ function handleCollapseShare() {
     emailField.style.border = "1px solid #ad6868";
 =======
   if (emailFieldValue === '') {
-    requiredMessage.innerHTML = 'Por favor, introduce un email válido*';
+    requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
     emailField.style.border = '1px solid #ad6868';
 >>>>>>> 7eaa80be7e8b484feeb399da6a9fb46df760594b
     emailField.focus();
@@ -92,7 +92,7 @@ function handleCollapseShare() {
     phoneField.style.border = "1px solid #ad6868";
 =======
   if (phoneFieldNumber === '') {
-    requiredMessage.innerHTML = 'Por favor, introduce un teléfono válido*';
+    requiredMessage.innerHTML = 'Por favor, rellena los campos que faltan*';
     phoneField.style.border = '1px solid #ad6868';
 >>>>>>> 7eaa80be7e8b484feeb399da6a9fb46df760594b
     phoneField.focus();
